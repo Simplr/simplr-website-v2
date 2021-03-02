@@ -6,15 +6,11 @@ import './components/app-window';
 export default class SimplrFrontpage extends LitElement {
     static get properties() {
         return {
-            title: { type: String, reflect: true },
-            subtitle: { type: String, reflect: true },
         };
     }
 
     constructor() {
         super();
-        this.title = 'Simplr Lit Element Template';
-        this.subtitle = 'Made with 💖 by the Simplr bois';
     }
 
     firstUpdated() { }
