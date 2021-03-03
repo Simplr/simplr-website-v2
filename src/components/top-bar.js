@@ -1,4 +1,5 @@
 import { LitElement, html, css } from 'lit-element';
+import root from "../utils/rootpath";
 
 export default class TopBar extends LitElement {
     render() {
@@ -7,7 +8,7 @@ export default class TopBar extends LitElement {
                 ${this.getStyles()}
             </style>
             <a class="logo-link" href="#">
-                <img src="/assets/simplr_horisontal_black.svg" />
+                <img src="${root()}assets/simplr_horisontal_black.svg" />
             </a>
             <nav class="links">
                 <a href="#">Development</a>

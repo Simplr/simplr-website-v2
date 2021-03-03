@@ -2,6 +2,7 @@ import { LitElement, html, css } from 'lit-element';
 import '@simplr-wc/card';
 import '@simplr-wc/button';
 import './components/app-window';
+import root from "./utils/rootpath";
 
 export default class SimplrFrontpage extends LitElement {
     static get properties() {
@@ -27,7 +28,7 @@ export default class SimplrFrontpage extends LitElement {
                         <slot name="content">
                             <h2>Full-Stack Development</h2>
                             <app-window>
-                                <img src="/assets/search_undraw.svg" />
+                                <img src="${root()}assets/search_undraw.svg" />
                             </app-window>
                             <div class="buttons">
                                 <simplr-button elevated primary>Products</simplr-button>
@@ -38,7 +39,7 @@ export default class SimplrFrontpage extends LitElement {
                     <simplr-card id="consulting-card">
                         <slot name="content">
                             <h2>Consulting</h2>
-                            <img src="/assets/consulting_undraw.svg" />
+                            <img src="${root()}assets/consulting_undraw.svg" />
                             <div class="buttons">
                                 <simplr-button outlined primary>Find out more</simplr-button>
                             </div>
