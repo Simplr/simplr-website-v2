@@ -1,4 +1,4 @@
-import{r as t,h as e,L as r,c as o}from"./router-af4bd3a4.js";
+import{r as t,h as e,L as r,c as o,a as i}from"./router-a23f86c8.js";
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
 
@@ -12,12 +12,12 @@ INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
 LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
 OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 PERFORMANCE OF THIS SOFTWARE.
-***************************************************************************** */function i(t,e,r,o){var i,n=arguments.length,s=n<3?e:null===o?o=Object.getOwnPropertyDescriptor(e,r):o;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)s=Reflect.decorate(t,e,r,o);else for(var a=t.length-1;a>=0;a--)(i=t[a])&&(s=(n<3?i(s):n>3?i(e,r,s):i(e,r))||s);return n>3&&s&&Object.defineProperty(e,r,s),s}function n(t){return function(e){e._is=t,customElements.get(t)||customElements.define(t,e)}}function s(t){return function(e,r){Object.defineProperty(e,r,{get:function(){return this._properties.get(r)},set:function(e){const o=this._properties.get(r);this._properties.set(r,e),function(t,e,r,o){if(!o||void 0===o)return;const i=e.toLowerCase();switch(typeof r){case"boolean":r?t.setAttribute(i,""):t.removeAttribute(i);break;case"string":null==r?t.removeAttribute(i):t.setAttribute(i,r)}}(this,r.toString(),e,t.reflect),this._queuePropertyUpdate(r.toString(),o)}})}}function a(r){const o=function(t){return e`
+***************************************************************************** */function n(t,e,r,o){var i,n=arguments.length,s=n<3?e:null===o?o=Object.getOwnPropertyDescriptor(e,r):o;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)s=Reflect.decorate(t,e,r,o);else for(var a=t.length-1;a>=0;a--)(i=t[a])&&(s=(n<3?i(s):n>3?i(e,r,s):i(e,r))||s);return n>3&&s&&Object.defineProperty(e,r,s),s}function s(t){return function(e){e._is=t,customElements.get(t)||customElements.define(t,e)}}function a(t){return function(e,r){Object.defineProperty(e,r,{get:function(){return this._properties.get(r)},set:function(e){const o=this._properties.get(r);this._properties.set(r,e),function(t,e,r,o){if(!o||void 0===o)return;const i=e.toLowerCase();switch(typeof r){case"boolean":r?t.setAttribute(i,""):t.removeAttribute(i);break;case"string":null==r?t.removeAttribute(i):t.setAttribute(i,r)}}(this,r.toString(),e,t.reflect),this._queuePropertyUpdate(r.toString(),o)}})}}function d(r){const o=function(t){return e`
         <style>
             ${t.css}
         </style>
         ${t.html}
-    `}(r);const i=r.shadowRoot??r;t(o,i)}class d extends HTMLElement{constructor(){super(),this._properties=new Map,this._renderRequested=!1,this._updatedProperties=new Map,this._willUpdate=!1,this.requestRender()}beforeRender(){}afterRender(){}updated(t){}render(){a(this)}attributeChangedCallback(t,e,r){console.log("AttributeChangedCallback",{name:t,oldValue:e,newValue:r})}requestRender(){this._renderRequested||(this._renderRequested=!0,window.requestAnimationFrame((()=>{this.beforeRender(),this.render(),this.afterRender(),this._renderRequested=!1})))}publish(t,e){const r=new CustomEvent(t,{detail:e});this.dispatchEvent(r)}_queuePropertyUpdate(t,e){this._updatedProperties.set(t,e),this._willUpdate||(this._willUpdate=!0,window.requestAnimationFrame((()=>{this.updated(this._updatedProperties),this._updatedProperties=new Map,this.requestRender(),this._willUpdate=!1})))}}function l(t,...e){let r="",o=0;for(;o<e.length;)r+=t[o],r+=String(e[o]),o++;return r+=t[t.length-1],r}d._is=void 0;let c=class extends d{constructor(){super(),this.attachShadow({mode:"open"})}attributeChangedCallback(t,e,r){e!==r&&(this[t]=r)}static get observedAttributes(){return["label","subtitle"]}get html(){return e`
+    `}(r);const i=r.shadowRoot??r;t(o,i)}class l extends HTMLElement{constructor(){super(),this._properties=new Map,this._renderRequested=!1,this._updatedProperties=new Map,this._willUpdate=!1,this.requestRender()}beforeRender(){}afterRender(){}updated(t){}render(){d(this)}attributeChangedCallback(t,e,r){console.log("AttributeChangedCallback",{name:t,oldValue:e,newValue:r})}requestRender(){this._renderRequested||(this._renderRequested=!0,window.requestAnimationFrame((()=>{this.beforeRender(),this.render(),this.afterRender(),this._renderRequested=!1})))}publish(t,e){const r=new CustomEvent(t,{detail:e});this.dispatchEvent(r)}_queuePropertyUpdate(t,e){this._updatedProperties.set(t,e),this._willUpdate||(this._willUpdate=!0,window.requestAnimationFrame((()=>{this.updated(this._updatedProperties),this._updatedProperties=new Map,this.requestRender(),this._willUpdate=!1})))}}function c(t,...e){let r="",o=0;for(;o<e.length;)r+=t[o],r+=String(e[o]),o++;return r+=t[t.length-1],r}l._is=void 0;let p=class extends l{constructor(){super(),this.attachShadow({mode:"open"})}attributeChangedCallback(t,e,r){e!==r&&(this[t]=r)}static get observedAttributes(){return["label","subtitle"]}get html(){return e`
             <slot name="media"></slot>
             <div class="content">
                 <h2>${this.label}</h2>
@@ -25,7 +25,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 <slot></slot>
             </div>
             <slot name="actions"></slot>
-        `}get css(){return l`
+        `}get css(){return c`
             :host {
                 min-width: 260px;
                 width: fit-content;
@@ -70,7 +70,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 padding: 1rem;
                 border-top: 1px solid #d6d1e0;
             }
-        `}};i([s({reflect:!0})],c.prototype,"label",void 0),i([s({reflect:!0})],c.prototype,"subtitle",void 0),c=i([n("simplr-card")],c);let p=class extends d{constructor(){super(),this.disabled=!1,this.outlined=!1,this.contained=!1,this.elevated=!1,this.primary=!1,this.secondary=!1,this.success=!1,this.type="button",this.attachShadow({mode:"open"})}connectedCallback(){this.tabIndex=0,this.createButton(),this.addEventListeners()}updated(){this.updateButtonAttributes()}addEventListeners(){this.addEventListener("keyup",this.handleKeyboardEvent.bind(this)),this.addEventListener("click",(t=>{t.target===this&&(t.stopPropagation(),this.doClick())}),!0)}handleKeyboardEvent(t){" "!==t.key&&"Enter"!==t.key||this.doClick()}doClick(){this.buttonElem?.click()}createButton(){this.buttonElem=document.createElement("button"),this.buttonElem.tabIndex=-1,this.appendChild(this.buttonElem),this.updateButtonAttributes()}updateButtonAttributes(){this.buttonElem&&(this.buttonElem.type=this.type)}attributeChangedCallback(t,e,r){e!==r&&(this[t]=""===r||r)}static get observedAttributes(){return["disabled","type","primary","secondary","success","outlined","contained","elevated"]}get html(){return e`<slot></slot>`}get css(){return l`
+        `}};n([a({reflect:!0})],p.prototype,"label",void 0),n([a({reflect:!0})],p.prototype,"subtitle",void 0),p=n([s("simplr-card")],p);let h=class extends l{constructor(){super(),this.disabled=!1,this.outlined=!1,this.contained=!1,this.elevated=!1,this.primary=!1,this.secondary=!1,this.success=!1,this.type="button",this.attachShadow({mode:"open"})}connectedCallback(){this.tabIndex=0,this.createButton(),this.addEventListeners()}updated(){this.updateButtonAttributes()}addEventListeners(){this.addEventListener("keyup",this.handleKeyboardEvent.bind(this)),this.addEventListener("click",(t=>{t.target===this&&(t.stopPropagation(),this.doClick())}),!0)}handleKeyboardEvent(t){" "!==t.key&&"Enter"!==t.key||this.doClick()}doClick(){this.buttonElem?.click()}createButton(){this.buttonElem=document.createElement("button"),this.buttonElem.tabIndex=-1,this.appendChild(this.buttonElem),this.updateButtonAttributes()}updateButtonAttributes(){this.buttonElem&&(this.buttonElem.type=this.type)}attributeChangedCallback(t,e,r){e!==r&&(this[t]=""===r||r)}static get observedAttributes(){return["disabled","type","primary","secondary","success","outlined","contained","elevated"]}get html(){return e`<slot></slot>`}get css(){return c`
             :host {
                 --primary-color: #0087d7;
                 --secondary-color: #f94416;
@@ -196,7 +196,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 padding: 0;
                 border: 0;
             }
-        `}};i([s({reflect:!0})],p.prototype,"disabled",void 0),i([s({reflect:!0})],p.prototype,"outlined",void 0),i([s({reflect:!0})],p.prototype,"contained",void 0),i([s({reflect:!0})],p.prototype,"elevated",void 0),i([s({reflect:!0})],p.prototype,"primary",void 0),i([s({reflect:!0})],p.prototype,"secondary",void 0),i([s({reflect:!0})],p.prototype,"success",void 0),i([s({reflect:!0})],p.prototype,"type",void 0),i([s({})],p.prototype,"buttonElem",void 0),p=i([n("simplr-button")],p);class h extends r{render(){return e`
+        `}};n([a({reflect:!0})],h.prototype,"disabled",void 0),n([a({reflect:!0})],h.prototype,"outlined",void 0),n([a({reflect:!0})],h.prototype,"contained",void 0),n([a({reflect:!0})],h.prototype,"elevated",void 0),n([a({reflect:!0})],h.prototype,"primary",void 0),n([a({reflect:!0})],h.prototype,"secondary",void 0),n([a({reflect:!0})],h.prototype,"success",void 0),n([a({reflect:!0})],h.prototype,"type",void 0),n([a({})],h.prototype,"buttonElem",void 0),h=n([s("simplr-button")],h);class u extends r{render(){return e`
             <style>
                 ${this.getStyles()}
             </style>
@@ -260,7 +260,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 background: #fff;
                 margin: 0 0 0.5rem;
             }
-        `}}customElements.get("app-window")||customElements.define("app-window",h);class u extends r{static get properties(){return{}}constructor(){super()}firstUpdated(){}render(){return e`
+        `}}customElements.get("app-window")||customElements.define("app-window",u);class m extends r{static get properties(){return{}}constructor(){super()}firstUpdated(){}render(){return e`
             <style>
                 ${this.renderStyles()}
             </style>
@@ -272,7 +272,7 @@ PERFORMANCE OF THIS SOFTWARE.
                         <slot name="content">
                             <h2>Full-Stack Development</h2>
                             <app-window>
-                                <img src="/assets/search_undraw.svg" />
+                                <img src="${i()}assets/search_undraw.svg" />
                             </app-window>
                             <div class="buttons">
                                 <simplr-button elevated primary>Products</simplr-button>
@@ -283,7 +283,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     <simplr-card id="consulting-card">
                         <slot name="content">
                             <h2>Consulting</h2>
-                            <img src="/assets/consulting_undraw.svg" />
+                            <img src="${i()}assets/consulting_undraw.svg" />
                             <div class="buttons">
                                 <simplr-button outlined primary>Find out more</simplr-button>
                             </div>
@@ -405,4 +405,4 @@ PERFORMANCE OF THIS SOFTWARE.
                 --primary-color: #FFF;
                 font-weight: 700;
             }
-        `}}customElements.get("simplr-frontpage")||customElements.define("simplr-frontpage",u);export default u;
+        `}}customElements.get("simplr-frontpage")||customElements.define("simplr-frontpage",m);export default m;
