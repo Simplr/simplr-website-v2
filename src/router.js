@@ -1,1 +1,1 @@
-import"./router-a23f86c8.js";
+import"./router-872ebe35.js";

@@ -1,4 +1,4 @@
-import{r as t,h as e,L as r,c as o,a as i}from"./router-a23f86c8.js";
+import{r as t,h as e,L as r,c as o,a as i}from"./router-872ebe35.js";
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
 
@@ -265,6 +265,8 @@ PERFORMANCE OF THIS SOFTWARE.
                 ${this.renderStyles()}
             </style>
 
+            ${this.getHeroContent()} ${this.getIntroductionContent()}
+        `}getHeroContent(){return e`
             <div class="hero-content">
                 <h2 class="hero-title">We provide...</h2>
                 <div class="hero-cards">
@@ -291,7 +293,9 @@ PERFORMANCE OF THIS SOFTWARE.
                     </simplr-card>
                 </div>
             </div>
-        `}renderStyles(){return o`
+        `}getIntroductionContent(){return e` <div class="intro-content">
+            <h2 class="intro-title">We are...</h2>
+        </div>`}renderStyles(){return o`
             :host {
                 display: flex;
                 flex-direction: column;
@@ -321,8 +325,8 @@ PERFORMANCE OF THIS SOFTWARE.
                 display: flex;
                 flex-direction: column;
                 width: var(--content-width);
-                margin-top: 12.5vh;
-                height: 75vh;
+                margin-top: 10.5vh;
+                height: calc(100vh - 12.5vh);
                 text-align: center;
                 align-items: center;
                 justify-content: center;
@@ -343,7 +347,6 @@ PERFORMANCE OF THIS SOFTWARE.
 
             .hero-title {
                 animation: fade-in 1000ms;
-
             }
 
             .hero-content simplr-card {
@@ -354,9 +357,9 @@ PERFORMANCE OF THIS SOFTWARE.
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin-top: 5%;
+                margin-top: 2%;
                 width: 100%;
-                flex-basis: 80%;
+                flex-basis: 75%;
                 animation: fade-in 1500ms;
             }
 
@@ -402,7 +405,7 @@ PERFORMANCE OF THIS SOFTWARE.
 
             #consulting-card simplr-button {
                 --size: 22px;
-                --primary-color: #FFF;
+                --primary-color: #fff;
                 font-weight: 700;
             }
         `}}customElements.get("simplr-frontpage")||customElements.define("simplr-frontpage",m);export default m;
