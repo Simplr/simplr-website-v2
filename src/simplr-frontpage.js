@@ -2,7 +2,7 @@ import { LitElement, html, css } from 'lit-element';
 import '@simplr-wc/card';
 import '@simplr-wc/button';
 import './components/app-window';
-import root from "./utils/rootpath";
+import root from './utils/rootpath';
 
 export default class SimplrFrontpage extends LitElement {
     static get properties() {
@@ -21,6 +21,12 @@ export default class SimplrFrontpage extends LitElement {
                 ${this.renderStyles()}
             </style>
 
+            ${this.getHeroContent()} ${this.getIntroductionContent()}
+        `;
+    }
+
+    getHeroContent() {
+        return html`
             <div class="hero-content">
                 <h2 class="hero-title">We provide...</h2>
                 <div class="hero-cards">
@@ -48,6 +54,12 @@ export default class SimplrFrontpage extends LitElement {
                 </div>
             </div>
         `;
+    }
+
+    getIntroductionContent() {
+        return html` <div class="intro-content">
+            <h2 class="intro-title">We are...</h2>
+        </div>`;
     }
 
     renderStyles() {
@@ -81,8 +93,8 @@ export default class SimplrFrontpage extends LitElement {
                 display: flex;
                 flex-direction: column;
                 width: var(--content-width);
-                margin-top: 12.5vh;
-                height: 75vh;
+                margin-top: 10.5vh;
+                height: calc(100vh - 12.5vh);
                 text-align: center;
                 align-items: center;
                 justify-content: center;
@@ -103,7 +115,6 @@ export default class SimplrFrontpage extends LitElement {
 
             .hero-title {
                 animation: fade-in 1000ms;
-
             }
 
             .hero-content simplr-card {
@@ -114,9 +125,9 @@ export default class SimplrFrontpage extends LitElement {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin-top: 5%;
+                margin-top: 2%;
                 width: 100%;
-                flex-basis: 80%;
+                flex-basis: 75%;
                 animation: fade-in 1500ms;
             }
 
@@ -162,7 +173,7 @@ export default class SimplrFrontpage extends LitElement {
 
             #consulting-card simplr-button {
                 --size: 22px;
-                --primary-color: #FFF;
+                --primary-color: #fff;
                 font-weight: 700;
             }
         `;
