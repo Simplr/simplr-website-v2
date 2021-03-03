@@ -28,6 +28,13 @@
 
     <body>
         <top-bar></top-bar>
-        <script src="/src/router.js" type="module"></script>
+
+        <script type="module">
+            if (window.location.href.includes('github.io')) {
+                import('/simplr-website-v2/src/router.js');
+            } else {
+                import('/src/router.js');
+            }
+        </script>
     </body>
 </html>
