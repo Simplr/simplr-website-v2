@@ -5,8 +5,7 @@ import './components/app-window';
 
 export default class SimplrFrontpage extends LitElement {
     static get properties() {
-        return {
-        };
+        return {};
     }
 
     constructor() {
@@ -22,27 +21,30 @@ export default class SimplrFrontpage extends LitElement {
             </style>
 
             <div class="hero-content">
-                <simplr-card id="development-card">
-                    <slot name="content">
-                        <h2>Full-Stack Development</h2>
-                        <app-window>
-                            <img src="/assets/search_undraw.svg" />
-                        </app-window>
-                        <div class="buttons">
-                            <simplr-button elevated primary>Products</simplr-button>
-                            <simplr-button elevated secondary>Open Source</simplr-button>
-                        </div>
-                    </slot>
-                </simplr-card>
-                <simplr-card id="consulting-card">
-                    <slot name="content">
-                        <h2>Consulting</h2>
-                        <img src="/assets/consulting_undraw.svg" />
-                        <div class="buttons">
-                            <simplr-button outlined primary>Find out more</simplr-button>
-                        </div>
-                    </slot>
-                </simplr-card>
+                <h2 class="hero-title">We provide...</h2>
+                <div class="hero-cards">
+                    <simplr-card id="development-card">
+                        <slot name="content">
+                            <h2>Full-Stack Development</h2>
+                            <app-window>
+                                <img src="/assets/search_undraw.svg" />
+                            </app-window>
+                            <div class="buttons">
+                                <simplr-button elevated primary>Products</simplr-button>
+                                <simplr-button elevated secondary>Open Source</simplr-button>
+                            </div>
+                        </slot>
+                    </simplr-card>
+                    <simplr-card id="consulting-card">
+                        <slot name="content">
+                            <h2>Consulting</h2>
+                            <img src="/assets/consulting_undraw.svg" />
+                            <div class="buttons">
+                                <simplr-button outlined primary>Find out more</simplr-button>
+                            </div>
+                        </slot>
+                    </simplr-card>
+                </div>
             </div>
         `;
     }
@@ -55,19 +57,34 @@ export default class SimplrFrontpage extends LitElement {
                 width: 100%;
                 font-size: 1.5rem;
                 align-items: center;
+                --content-width: 60%;
+            }
+
+            @keyframes fade-in {
+                from {
+                    transform: translate(0, 100px);
+                    opacity: 0;
+                }
             }
 
             simplr-card {
                 border-radius: 16px;
+                max-width: unset;
+            }
+
+            simplr-button {
+                white-space: nowrap;
             }
 
             .hero-content {
                 display: flex;
-                width: 60%;
-                height: 100vh;
+                flex-direction: column;
+                width: var(--content-width);
+                margin-top: 12.5vh;
+                height: 75vh;
                 text-align: center;
-                justify-content: space-between;
                 align-items: center;
+                justify-content: center;
             }
 
             .hero-content slot[name='content'] {
@@ -80,10 +97,26 @@ export default class SimplrFrontpage extends LitElement {
 
             .hero-content h2 {
                 font-weight: 900;
+                margin: 0;
+            }
+
+            .hero-title {
+                animation: fade-in 1000ms;
+
             }
 
             .hero-content simplr-card {
-                height: 60%;
+                box-sizing: border-box;
+            }
+
+            .hero-cards {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 5%;
+                width: 100%;
+                flex-basis: 80%;
+                animation: fade-in 1500ms;
             }
 
             #development-card img {
@@ -103,19 +136,18 @@ export default class SimplrFrontpage extends LitElement {
                 --size: 18px;
             }
 
-            app-window {
-                margin: 2rem 0;
-            }
-
             #development-card {
                 padding: 2rem 3rem;
-                min-width: 37.5%;
+                max-width: 450px;
+                height: 80%;
             }
 
             #consulting-card {
                 padding: 4rem 3rem;
-                min-width: 45%;
                 background: lightsalmon;
+                max-width: 550px;
+                margin-left: 1rem;
+                height: 90%;
             }
 
             #consulting-card img {
@@ -129,6 +161,7 @@ export default class SimplrFrontpage extends LitElement {
 
             #consulting-card simplr-button {
                 --size: 22px;
+                --primary-color: #FFF;
                 font-weight: 700;
             }
         `;

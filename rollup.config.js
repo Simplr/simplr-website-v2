@@ -1,6 +1,6 @@
 import resolve from '@rollup/plugin-node-resolve';
 import filesize from 'rollup-plugin-filesize';
-import minifyHTML from 'rollup-plugin-minify-html-literals';
+//import minifyHTML from 'rollup-plugin-minify-html-literals';
 import { terser } from 'rollup-plugin-terser';
 import copy from 'rollup-plugin-copy';
 
@@ -12,14 +12,15 @@ export default {
         format: 'es',
     },
     plugins: [
-        resolve(), 
-        minifyHTML(), 
+        resolve(),
+        //        minifyHTML(),
         copy({
             targets: [
-                { src: "index.html", dest: "dist" }
+                { src: "index.html", dest: "dist" },
+                { src: "assets", dest: "dist" }
             ]
         }),
-        filesize(), 
+        filesize(),
         terser()
     ],
 };

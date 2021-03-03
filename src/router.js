@@ -1,6 +1,8 @@
 import SimplrRouter from '@simplr-wc/router';
 import routes from './routes.js';
 
+import "./components/top-bar";
+
 const routerOptions = {
     // transitionSpeed: 200,
     // notFoundAction: () => console.error("not found"),

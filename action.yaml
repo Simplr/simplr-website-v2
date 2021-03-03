@@ -1,0 +1,31 @@
+name: 'Site deployer'
+description: 'Builds and deploys the latest preview build of the Website'
+
+on:
+    push:
+        branches:
+            - master
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        
+        strategy:
+          matrix:
+            node-version: [10.x, 12.x, 14.x, 15.x]
+
+        steps:
+            - name: Checkout 📦
+              uses: actions/checkout@v2.3.1
+
+            - name: Build 🔨
+              run: |
+                  npm install
+                  npm run build
+
+            - name: Deploy 🚀
+              uses: JamesIves/github-pages-deploy-action@4.0.0
+              with:
+                  branch: gh-pages
+                  folder: build
+
