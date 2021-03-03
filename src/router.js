@@ -4,12 +4,8 @@ import routes from './routes.js';
 import "./components/top-bar";
 
 const routerOptions = {
-    // transitionSpeed: 200,
-    // notFoundAction: () => console.error("not found"),
-    // forbiddenAction () => console.error("forbidden"),
     routes: routes,
-    // rootPath: my-app,
-    // disableTransition: false
+    rootPath: "/simplr-website-v2"
 };
 
 const router = new SimplrRouter(routerOptions);

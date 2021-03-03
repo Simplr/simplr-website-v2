@@ -4,7 +4,7 @@
     "description": "This project was created using the [Simplr Create](https://github.com/Simplr/Configs/tree/main/create) command",
     "main": "index.js",
     "scripts": {
-        "start": "wds --node-resolve --watch --open",
+        "start": "wds --node-resolve --watch --open simplr-website-v2 --app-index index.html",
         "build": "rimraf dist && rollup -c rollup.config.js"
     },
     "keywords": [],
@@ -31,7 +31,7 @@
         "@simplr-wc/button": "^0.1.1",
         "@simplr-wc/card": "^0.1.1",
         "@simplr-wc/loading": "^0.1.0",
-        "@simplr-wc/router": "^6.1.1",
+        "@simplr-wc/router": "^6.1.2",
         "lit-element": "^2.4.0",
         "stoxy": "^1.1.0",
         "tslib": "^2.1.0"
