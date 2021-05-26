@@ -1,4 +1,4 @@
-import{r as t,h as e,L as r,c as o,a as i}from"./router-872ebe35.js";
+import{r as t,h as e,L as i,c as r,a as o,g as n,l as s,t as a}from"./router-ac8e7279.js";
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
 
@@ -12,12 +12,12 @@ INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
 LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
 OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 PERFORMANCE OF THIS SOFTWARE.
-***************************************************************************** */function n(t,e,r,o){var i,n=arguments.length,s=n<3?e:null===o?o=Object.getOwnPropertyDescriptor(e,r):o;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)s=Reflect.decorate(t,e,r,o);else for(var a=t.length-1;a>=0;a--)(i=t[a])&&(s=(n<3?i(s):n>3?i(e,r,s):i(e,r))||s);return n>3&&s&&Object.defineProperty(e,r,s),s}function s(t){return function(e){e._is=t,customElements.get(t)||customElements.define(t,e)}}function a(t){return function(e,r){Object.defineProperty(e,r,{get:function(){return this._properties.get(r)},set:function(e){const o=this._properties.get(r);this._properties.set(r,e),function(t,e,r,o){if(!o||void 0===o)return;const i=e.toLowerCase();switch(typeof r){case"boolean":r?t.setAttribute(i,""):t.removeAttribute(i);break;case"string":null==r?t.removeAttribute(i):t.setAttribute(i,r)}}(this,r.toString(),e,t.reflect),this._queuePropertyUpdate(r.toString(),o)}})}}function d(r){const o=function(t){return e`
+***************************************************************************** */function l(t,e,i,r){var o,n=arguments.length,s=n<3?e:null===r?r=Object.getOwnPropertyDescriptor(e,i):r;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)s=Reflect.decorate(t,e,i,r);else for(var a=t.length-1;a>=0;a--)(o=t[a])&&(s=(n<3?o(s):n>3?o(e,i,s):o(e,i))||s);return n>3&&s&&Object.defineProperty(e,i,s),s}function c(t){return function(e){e._is=t,customElements.get(t)||customElements.define(t,e)}}function d(t){return function(e,i){Object.defineProperty(e,i,{get:function(){return this._properties.get(i)},set:function(e){const r=this._properties.get(i);this._properties.set(i,e),function(t,e,i,r){if(!r||void 0===r)return;const o=e.toLowerCase();switch(typeof i){case"boolean":i?t.setAttribute(o,""):t.removeAttribute(o);break;case"string":null==i?t.removeAttribute(o):t.setAttribute(o,i)}}(this,i.toString(),e,t.reflect),this._queuePropertyUpdate(i.toString(),r)}})}}function h(i){const r=function(t){return e`
         <style>
             ${t.css}
         </style>
         ${t.html}
-    `}(r);const i=r.shadowRoot??r;t(o,i)}class l extends HTMLElement{constructor(){super(),this._properties=new Map,this._renderRequested=!1,this._updatedProperties=new Map,this._willUpdate=!1,this.requestRender()}beforeRender(){}afterRender(){}updated(t){}render(){d(this)}attributeChangedCallback(t,e,r){console.log("AttributeChangedCallback",{name:t,oldValue:e,newValue:r})}requestRender(){this._renderRequested||(this._renderRequested=!0,window.requestAnimationFrame((()=>{this.beforeRender(),this.render(),this.afterRender(),this._renderRequested=!1})))}publish(t,e){const r=new CustomEvent(t,{detail:e});this.dispatchEvent(r)}_queuePropertyUpdate(t,e){this._updatedProperties.set(t,e),this._willUpdate||(this._willUpdate=!0,window.requestAnimationFrame((()=>{this.updated(this._updatedProperties),this._updatedProperties=new Map,this.requestRender(),this._willUpdate=!1})))}}function c(t,...e){let r="",o=0;for(;o<e.length;)r+=t[o],r+=String(e[o]),o++;return r+=t[t.length-1],r}l._is=void 0;let p=class extends l{constructor(){super(),this.attachShadow({mode:"open"})}attributeChangedCallback(t,e,r){e!==r&&(this[t]=r)}static get observedAttributes(){return["label","subtitle"]}get html(){return e`
+    `}(i);const o=i.shadowRoot??i;t(r,o)}class p extends HTMLElement{constructor(){super(),this._properties=new Map,this._renderRequested=!1,this._updatedProperties=new Map,this._willUpdate=!1,this.requestRender()}beforeRender(){}afterRender(){}updated(t){}render(){h(this)}attributeChangedCallback(t,e,i){console.log("AttributeChangedCallback",{name:t,oldValue:e,newValue:i})}requestRender(){this._renderRequested||(this._renderRequested=!0,window.requestAnimationFrame((()=>{this.beforeRender(),this.render(),this.afterRender(),this._renderRequested=!1})))}publish(t,e){const i=new CustomEvent(t,{detail:e});this.dispatchEvent(i)}_queuePropertyUpdate(t,e){this._updatedProperties.set(t,e),this._willUpdate||(this._willUpdate=!0,window.requestAnimationFrame((()=>{this.updated(this._updatedProperties),this._updatedProperties=new Map,this.requestRender(),this._willUpdate=!1})))}}function u(t,...e){let i="",r=0;for(;r<e.length;)i+=t[r],i+=String(e[r]),r++;return i+=t[t.length-1],i}p._is=void 0;let m=class extends p{constructor(){super(),this.attachShadow({mode:"open"})}attributeChangedCallback(t,e,i){e!==i&&(this[t]=i)}static get observedAttributes(){return["label","subtitle"]}get html(){return e`
             <slot name="media"></slot>
             <div class="content">
                 <h2>${this.label}</h2>
@@ -25,7 +25,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 <slot></slot>
             </div>
             <slot name="actions"></slot>
-        `}get css(){return c`
+        `}get css(){return u`
             :host {
                 min-width: 260px;
                 width: fit-content;
@@ -70,7 +70,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 padding: 1rem;
                 border-top: 1px solid #d6d1e0;
             }
-        `}};n([a({reflect:!0})],p.prototype,"label",void 0),n([a({reflect:!0})],p.prototype,"subtitle",void 0),p=n([s("simplr-card")],p);let h=class extends l{constructor(){super(),this.disabled=!1,this.outlined=!1,this.contained=!1,this.elevated=!1,this.primary=!1,this.secondary=!1,this.success=!1,this.type="button",this.attachShadow({mode:"open"})}connectedCallback(){this.tabIndex=0,this.createButton(),this.addEventListeners()}updated(){this.updateButtonAttributes()}addEventListeners(){this.addEventListener("keyup",this.handleKeyboardEvent.bind(this)),this.addEventListener("click",(t=>{t.target===this&&(t.stopPropagation(),this.doClick())}),!0)}handleKeyboardEvent(t){" "!==t.key&&"Enter"!==t.key||this.doClick()}doClick(){this.buttonElem?.click()}createButton(){this.buttonElem=document.createElement("button"),this.buttonElem.tabIndex=-1,this.appendChild(this.buttonElem),this.updateButtonAttributes()}updateButtonAttributes(){this.buttonElem&&(this.buttonElem.type=this.type)}attributeChangedCallback(t,e,r){e!==r&&(this[t]=""===r||r)}static get observedAttributes(){return["disabled","type","primary","secondary","success","outlined","contained","elevated"]}get html(){return e`<slot></slot>`}get css(){return c`
+        `}};l([d({reflect:!0})],m.prototype,"label",void 0),l([d({reflect:!0})],m.prototype,"subtitle",void 0),m=l([c("simplr-card")],m);let g=class extends p{constructor(){super(),this.disabled=!1,this.outlined=!1,this.contained=!1,this.elevated=!1,this.primary=!1,this.secondary=!1,this.success=!1,this.type="button",this.attachShadow({mode:"open"})}connectedCallback(){this.tabIndex=0,this.createButton(),this.addEventListeners()}updated(){this.updateButtonAttributes()}addEventListeners(){this.addEventListener("keyup",this.handleKeyboardEvent.bind(this)),this.addEventListener("click",(t=>{t.target===this&&(t.stopPropagation(),this.doClick())}),!0)}handleKeyboardEvent(t){" "!==t.key&&"Enter"!==t.key||this.doClick()}doClick(){this.buttonElem?.click()}createButton(){this.buttonElem=document.createElement("button"),this.buttonElem.tabIndex=-1,this.appendChild(this.buttonElem),this.updateButtonAttributes()}updateButtonAttributes(){this.buttonElem&&(this.buttonElem.type=this.type)}attributeChangedCallback(t,e,i){e!==i&&(this[t]=""===i||i)}static get observedAttributes(){return["disabled","type","primary","secondary","success","outlined","contained","elevated"]}get html(){return e`<slot></slot>`}get css(){return u`
             :host {
                 --primary-color: #0087d7;
                 --secondary-color: #f94416;
@@ -196,7 +196,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 padding: 0;
                 border: 0;
             }
-        `}};n([a({reflect:!0})],h.prototype,"disabled",void 0),n([a({reflect:!0})],h.prototype,"outlined",void 0),n([a({reflect:!0})],h.prototype,"contained",void 0),n([a({reflect:!0})],h.prototype,"elevated",void 0),n([a({reflect:!0})],h.prototype,"primary",void 0),n([a({reflect:!0})],h.prototype,"secondary",void 0),n([a({reflect:!0})],h.prototype,"success",void 0),n([a({reflect:!0})],h.prototype,"type",void 0),n([a({})],h.prototype,"buttonElem",void 0),h=n([s("simplr-button")],h);class u extends r{render(){return e`
+        `}};l([d({reflect:!0})],g.prototype,"disabled",void 0),l([d({reflect:!0})],g.prototype,"outlined",void 0),l([d({reflect:!0})],g.prototype,"contained",void 0),l([d({reflect:!0})],g.prototype,"elevated",void 0),l([d({reflect:!0})],g.prototype,"primary",void 0),l([d({reflect:!0})],g.prototype,"secondary",void 0),l([d({reflect:!0})],g.prototype,"success",void 0),l([d({reflect:!0})],g.prototype,"type",void 0),l([d({})],g.prototype,"buttonElem",void 0),g=l([c("simplr-button")],g);class b extends i{render(){return e`
             <style>
                 ${this.getStyles()}
             </style>
@@ -211,7 +211,7 @@ PERFORMANCE OF THIS SOFTWARE.
             <div class="window">
                 <slot></slot>
             </div>
-        `}getStyles(){return o`
+        `}getStyles(){return r`
             :host {
                 width: 100%;
                 border-radius: 8px;
@@ -260,12 +260,31 @@ PERFORMANCE OF THIS SOFTWARE.
                 background: #fff;
                 margin: 0 0 0.5rem;
             }
-        `}}customElements.get("app-window")||customElements.define("app-window",u);class m extends r{static get properties(){return{}}constructor(){super()}firstUpdated(){}render(){return e`
+        `}}customElements.get("app-window")||customElements.define("app-window",b);class f extends i{static get properties(){return{count:{type:String,reflect:!0},title:{type:String,reflect:!0}}}constructor(){super(),this.count="0",this.title=""}render(){return e`
+            <h2>${this.count}</h2>
+            <p>${this.title}</p>
+        `}static get styles(){return r`
+            :host {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            h2 {
+                color: var(--primary-color);
+            }
+
+            h2,
+            p {
+                margin: 0.5rem;
+            }
+        `}}customElements.get("highlight-number")||customElements.define("highlight-number",f);class v extends i{static get properties(){return{}}constructor(){super()}firstUpdated(){}render(){return e`
             <style>
                 ${this.renderStyles()}
             </style>
 
-            ${this.getHeroContent()} ${this.getIntroductionContent()}
+            ${this.getHeroContent()} ${this.getIntroductionContent()} ${this.getContactContent()}
+
+            <site-footer></site-footer>
         `}getHeroContent(){return e`
             <div class="hero-content">
                 <h2 class="hero-title">We provide...</h2>
@@ -274,7 +293,7 @@ PERFORMANCE OF THIS SOFTWARE.
                         <slot name="content">
                             <h2>Full-Stack Development</h2>
                             <app-window>
-                                <img src="${i()}assets/search_undraw.svg" />
+                                <img src="${o()}assets/search_undraw.svg" />
                             </app-window>
                             <div class="buttons">
                                 <simplr-button elevated primary>Products</simplr-button>
@@ -285,7 +304,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     <simplr-card id="consulting-card">
                         <slot name="content">
                             <h2>Consulting</h2>
-                            <img src="${i()}assets/consulting_undraw.svg" />
+                            <img src="${o()}assets/consulting_undraw.svg" />
                             <div class="buttons">
                                 <simplr-button outlined primary>Find out more</simplr-button>
                             </div>
@@ -294,15 +313,39 @@ PERFORMANCE OF THIS SOFTWARE.
                 </div>
             </div>
         `}getIntroductionContent(){return e` <div class="intro-content">
-            <h2 class="intro-title">We are...</h2>
-        </div>`}renderStyles(){return o`
+            <h2 class="intro-title">Simplr in numbers</h2>
+            <div>
+                <div class="highlight-collection">
+                    <highlight-number count="2" title="Professional developers"></highlight-number>
+                    <highlight-number count="1" title="Vim user"></highlight-number>
+                    <highlight-number count="24" title="Cones of Ice Cream in the freezer"></highlight-number>
+                    <highlight-number count="0%" title="Micromanagement"></highlight-number>
+                    <highlight-number count="~1200" title="Github Commits in the past year"></highlight-number>
+                    <highlight-number count="> 25" title="Published Web Components"></highlight-number>
+                    <highlight-number count="> 5" title="Published Javascript libraries"></highlight-number>
+                    <highlight-number count="> 10" title="Finished projects"></highlight-number>
+                    <highlight-number count="4" title="Satisfied customer companies"></highlight-number>
+                </div>
+            </div>
+        </div>`}getContactContent(){return e`
+            <div class="contact-content">
+                <h2 class="contact-title">Get into contact with us</h2>
+
+                <div class="contacts">
+                    <a href="https://github.com/Simplr">${n}</a>
+                    <a href="https://www.linkedin.com/company/simplrcompany/">${s}</a>
+                    <a href="https://twitter.com/SimplrCompany">${a}</a>
+                </div>
+            </div>
+        `}renderStyles(){return r`
             :host {
                 display: flex;
                 flex-direction: column;
                 width: 100%;
                 font-size: 1.5rem;
                 align-items: center;
-                --content-width: 60%;
+                position: relative;
+                --content-width: 80%;
             }
 
             @keyframes fade-in {
@@ -321,7 +364,39 @@ PERFORMANCE OF THIS SOFTWARE.
                 white-space: nowrap;
             }
 
-            .hero-content {
+            app-window {
+                margin: 2rem 0;
+            }
+
+            .contact-title {
+                margin-bottom: 4rem;
+            }
+
+            .contacts {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .contacts * {
+                margin: 0 1rem;
+            }
+
+            .contact-content svg {
+                width: 5rem;
+                height: 5rem;
+            }
+
+            .contact-content a {
+                transition: 200ms ease-in-out;
+            }
+
+            .contact-content a:hover {
+                fill: var(--primary-color);
+            }
+
+            .hero-content,
+            .intro-content,
+            .contact-content {
                 display: flex;
                 flex-direction: column;
                 width: var(--content-width);
@@ -330,6 +405,15 @@ PERFORMANCE OF THIS SOFTWARE.
                 text-align: center;
                 align-items: center;
                 justify-content: center;
+            }
+
+            .intro-content,
+            .contact-content {
+                justify-content: flex-start;
+            }
+
+            .contact-content {
+                padding-bottom: 20rem;
             }
 
             .hero-content slot[name='content'] {
@@ -383,7 +467,6 @@ PERFORMANCE OF THIS SOFTWARE.
             #development-card {
                 padding: 2rem 3rem;
                 max-width: 450px;
-                height: 80%;
             }
 
             #consulting-card {
@@ -391,11 +474,11 @@ PERFORMANCE OF THIS SOFTWARE.
                 background: lightsalmon;
                 max-width: 550px;
                 margin-left: 1rem;
-                height: 90%;
             }
 
             #consulting-card img {
                 width: 80%;
+                margin: 2rem 0;
                 filter: drop-shadow(6px 12px 6px rgba(0, 0, 0, 0.12));
             }
 
@@ -408,4 +491,16 @@ PERFORMANCE OF THIS SOFTWARE.
                 --primary-color: #fff;
                 font-weight: 700;
             }
-        `}}customElements.get("simplr-frontpage")||customElements.define("simplr-frontpage",m);export default m;
+
+            .highlight-collection {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 3rem;
+            }
+
+            .highlight-collection * {
+                flex-basis: 30%;
+                margin-bottom: 4rem;
+            }
+        `}}customElements.get("simplr-frontpage")||customElements.define("simplr-frontpage",v);export default v;
