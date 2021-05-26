@@ -2,7 +2,11 @@ import { LitElement, html, css } from 'lit-element';
 import '@simplr-wc/card';
 import '@simplr-wc/button';
 import './components/app-window';
+import './components/highlight-number';
 import root from './utils/rootpath';
+import { github } from './icons/github';
+import { linkedin } from './icons/linkedin';
+import { twitter } from './icons/twitter';
 
 export default class SimplrFrontpage extends LitElement {
     static get properties() {
@@ -21,7 +25,9 @@ export default class SimplrFrontpage extends LitElement {
                 ${this.renderStyles()}
             </style>
 
-            ${this.getHeroContent()} ${this.getIntroductionContent()}
+            ${this.getHeroContent()} ${this.getIntroductionContent()} ${this.getContactContent()}
+
+            <site-footer></site-footer>
         `;
     }
 
@@ -58,8 +64,35 @@ export default class SimplrFrontpage extends LitElement {
 
     getIntroductionContent() {
         return html` <div class="intro-content">
-            <h2 class="intro-title">We are...</h2>
+            <h2 class="intro-title">Simplr in numbers</h2>
+            <div>
+                <div class="highlight-collection">
+                    <highlight-number count="2" title="Professional developers"></highlight-number>
+                    <highlight-number count="1" title="Vim user"></highlight-number>
+                    <highlight-number count="24" title="Cones of Ice Cream in the freezer"></highlight-number>
+                    <highlight-number count="0%" title="Micromanagement"></highlight-number>
+                    <highlight-number count="~1200" title="Github Commits in the past year"></highlight-number>
+                    <highlight-number count="> 25" title="Published Web Components"></highlight-number>
+                    <highlight-number count="> 5" title="Published Javascript libraries"></highlight-number>
+                    <highlight-number count="> 10" title="Finished projects"></highlight-number>
+                    <highlight-number count="4" title="Satisfied customer companies"></highlight-number>
+                </div>
+            </div>
         </div>`;
+    }
+
+    getContactContent() {
+        return html`
+            <div class="contact-content">
+                <h2 class="contact-title">Get into contact with us</h2>
+
+                <div class="contacts">
+                    <a href="https://github.com/Simplr">${github}</a>
+                    <a href="https://www.linkedin.com/company/simplrcompany/">${linkedin}</a>
+                    <a href="https://twitter.com/SimplrCompany">${twitter}</a>
+                </div>
+            </div>
+        `;
     }
 
     renderStyles() {
@@ -70,7 +103,8 @@ export default class SimplrFrontpage extends LitElement {
                 width: 100%;
                 font-size: 1.5rem;
                 align-items: center;
-                --content-width: 60%;
+                position: relative;
+                --content-width: 80%;
             }
 
             @keyframes fade-in {
@@ -89,7 +123,39 @@ export default class SimplrFrontpage extends LitElement {
                 white-space: nowrap;
             }
 
-            .hero-content {
+            app-window {
+                margin: 2rem 0;
+            }
+
+            .contact-title {
+                margin-bottom: 4rem;
+            }
+
+            .contacts {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .contacts * {
+                margin: 0 1rem;
+            }
+
+            .contact-content svg {
+                width: 5rem;
+                height: 5rem;
+            }
+
+            .contact-content a {
+                transition: 200ms ease-in-out;
+            }
+
+            .contact-content a:hover {
+                fill: var(--primary-color);
+            }
+
+            .hero-content,
+            .intro-content,
+            .contact-content {
                 display: flex;
                 flex-direction: column;
                 width: var(--content-width);
@@ -98,6 +164,15 @@ export default class SimplrFrontpage extends LitElement {
                 text-align: center;
                 align-items: center;
                 justify-content: center;
+            }
+
+            .intro-content,
+            .contact-content {
+                justify-content: flex-start;
+            }
+
+            .contact-content {
+                padding-bottom: 20rem;
             }
 
             .hero-content slot[name='content'] {
@@ -151,7 +226,6 @@ export default class SimplrFrontpage extends LitElement {
             #development-card {
                 padding: 2rem 3rem;
                 max-width: 450px;
-                height: 80%;
             }
 
             #consulting-card {
@@ -159,11 +233,11 @@ export default class SimplrFrontpage extends LitElement {
                 background: lightsalmon;
                 max-width: 550px;
                 margin-left: 1rem;
-                height: 90%;
             }
 
             #consulting-card img {
                 width: 80%;
+                margin: 2rem 0;
                 filter: drop-shadow(6px 12px 6px rgba(0, 0, 0, 0.12));
             }
 
@@ -175,6 +249,18 @@ export default class SimplrFrontpage extends LitElement {
                 --size: 22px;
                 --primary-color: #fff;
                 font-weight: 700;
+            }
+
+            .highlight-collection {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 3rem;
+            }
+
+            .highlight-collection * {
+                flex-basis: 30%;
+                margin-bottom: 4rem;
             }
         `;
     }
