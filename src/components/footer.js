@@ -25,11 +25,8 @@ class Footer extends LitElement {
     static get styles() {
         return css`
             :host {
-                position: absolute;
                 display: flex;
                 width: 100%;
-                bottom: 0;
-                left: 0;
                 min-height: 4rem;
                 color: #232320;
                 justify-content: space-between;

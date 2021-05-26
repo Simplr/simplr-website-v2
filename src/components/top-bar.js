@@ -7,13 +7,13 @@ export default class TopBar extends LitElement {
             <style>
                 ${this.getStyles()}
             </style>
-            <a class="logo-link" href="#">
+            <a class="logo-link" href="/">
                 <img src="${root()}assets/simplr_horisontal_black.svg" />
             </a>
             <nav class="links">
-                <a href="#">Development</a>
-                <a href="#">Consulting</a>
-                <a href="#">Contact</a>
+                <a href="${root()}development">Development</a>
+                <a href="${root()}consulting">Consulting</a>
+                <a href="${root()}contact">Contact</a>
             </nav>
         `;
     }

@@ -3,10 +3,11 @@ import routes from './routes.js';
 
 import "./components/top-bar";
 import "./components/footer";
+import root from './utils/rootpath.js';
 
 const routerOptions = {
     routes: routes,
-    rootPath: "/simplr-website-v2"
+    rootPath: root()
 };
 
 const router = new SimplrRouter(routerOptions);

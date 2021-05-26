@@ -21,10 +21,6 @@ export default class SimplrFrontpage extends LitElement {
 
     render() {
         return html`
-            <style>
-                ${this.renderStyles()}
-            </style>
-
             ${this.getHeroContent()} ${this.getIntroductionContent()} ${this.getContactContent()}
 
             <site-footer></site-footer>
@@ -84,7 +80,7 @@ export default class SimplrFrontpage extends LitElement {
     getContactContent() {
         return html`
             <div class="contact-content">
-                <h2 class="contact-title">Get into contact with us</h2>
+                <h2 class="contact-title">Get in contact with us</h2>
 
                 <div class="contacts">
                     <a href="https://github.com/Simplr">${github}</a>
@@ -95,7 +91,7 @@ export default class SimplrFrontpage extends LitElement {
         `;
     }
 
-    renderStyles() {
+    static get styles() {
         return css`
             :host {
                 display: flex;
@@ -172,7 +168,7 @@ export default class SimplrFrontpage extends LitElement {
             }
 
             .contact-content {
-                padding-bottom: 20rem;
+                height: calc(100vh - 45vh);
             }
 
             .hero-content slot[name='content'] {
