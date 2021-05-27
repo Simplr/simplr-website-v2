@@ -7,7 +7,9 @@ import root from './utils/rootpath';
 import { github } from './icons/github';
 import { linkedin } from './icons/linkedin';
 import { twitter } from './icons/twitter';
+import { viewCSS } from './style/shared';
 
+// This file is quite messy but really don't see a proper reason to separata parts of it 
 export default class SimplrFrontpage extends LitElement {
     static get properties() {
         return {};
@@ -98,27 +100,7 @@ export default class SimplrFrontpage extends LitElement {
     }
 
     static get styles() {
-        return css`
-            :host {
-                display: flex;
-                flex-direction: column;
-                width: 100%;
-                font-size: 1.5rem;
-                align-items: center;
-                position: relative;
-                --content-width: 80%;
-            }
-
-            @keyframes fade-in {
-                from {
-                    transform: translate(0, 100px);
-                    opacity: 0;
-                }
-            }
-
-            a {
-                text-decoration: none;
-            }
+        return [viewCSS, css`
 
             simplr-card {
                 border-radius: 16px;
@@ -303,7 +285,7 @@ export default class SimplrFrontpage extends LitElement {
                     flex-basis: 45%;
                 }
             }
-        `;
+        `];
     }
 }
 

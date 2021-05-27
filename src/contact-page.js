@@ -3,9 +3,9 @@ import '@simplr-wc/card';
 import '@simplr-wc/button';
 import './components/technology-logo.js';
 import './components/reference-companies.js';
-import root from './utils/rootpath.js';
 import { scrollToBlock } from './utils/scroller.js';
 import { email, phone } from './icons/contact.js';
+import { viewCSS } from './style/shared.js';
 
 export default class SimplrContactPage extends LitElement {
     static get properties() {
@@ -43,17 +43,7 @@ export default class SimplrContactPage extends LitElement {
         `;
     }
     static get styles() {
-        return css`
-            :host {
-                display: flex;
-                flex-direction: column;
-                width: 100%;
-                font-size: 1.5rem;
-                align-items: center;
-                position: relative;
-                --content-width: 80%;
-            }
-
+        return [viewCSS, css`
             .main-pane {
                 animation: fade-in 1000ms;
             }
@@ -96,13 +86,6 @@ export default class SimplrContactPage extends LitElement {
                 margin-right: 2rem;
             }
 
-            @keyframes fade-in {
-                from {
-                    transform: translate(0, 100px);
-                    opacity: 0;
-                }
-            }
-
             @media only screen and (max-width: 720px) {
                 :host {
                     --content-width: 80%;
@@ -116,7 +99,7 @@ export default class SimplrContactPage extends LitElement {
                     white-space: unset;
                 }
             }
-        `;
+        `];
     }
 }
 

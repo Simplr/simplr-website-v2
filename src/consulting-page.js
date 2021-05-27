@@ -5,6 +5,7 @@ import './components/technology-logo.js';
 import './components/reference-companies.js';
 import root from './utils/rootpath.js';
 import { scrollToBlock } from './utils/scroller.js';
+import { viewCSS } from './style/shared.js';
 
 export default class SimplrConsultingPage extends LitElement {
     static get properties() {
@@ -65,25 +66,9 @@ export default class SimplrConsultingPage extends LitElement {
         `;
     }
     static get styles() {
-        return css`
-            :host {
-                display: flex;
-                flex-direction: column;
-                width: 100%;
-                font-size: 1.5rem;
-                align-items: center;
-                position: relative;
-                --content-width: 80%;
-            }
-
+        return [viewCSS, css`
             .main-pane {
                 animation: fade-in 1000ms;
-            }
-
-            a {
-                color: inherit;
-                text-decoration: none;
-                font-weight: bold;
             }
 
             .content-pane {
@@ -120,13 +105,6 @@ export default class SimplrConsultingPage extends LitElement {
                 width: 100%;
             }
 
-            @keyframes fade-in {
-                from {
-                    transform: translate(0, 100px);
-                    opacity: 0;
-                }
-            }
-
             @media only screen and (max-width: 720px) {
                 :host {
                     --content-width: 90%;
@@ -145,7 +123,7 @@ export default class SimplrConsultingPage extends LitElement {
                     flex-direction: column-reverse;
                 }
             }
-        `;
+        `];
     }
 }
 
