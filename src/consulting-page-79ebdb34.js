@@ -1,8 +1,8 @@
-import{L as t,h as e,c as r}from"./router-4dd580c4.js";import"./card-e1020cd0.js";import"@simplr-wc/button";import"./highlight-number-aca89b4f.js";class s extends t{static get properties(){return{}}constructor(){super()}firstUpdated(){}render(){return e`
+import{L as t,h as e,c as s}from"./router-98dcfa0f.js";import"./button-56559b51.js";import"./highlight-number-06148410.js";class r extends t{static get properties(){return{}}constructor(){super()}firstUpdated(){}render(){return e`
             <h2>Consulting</h2>
 
             <site-footer></site-footer>
-        `}static get styles(){return r`
+        `}static get styles(){return s`
             :host {
                 display: flex;
                 flex-direction: column;
@@ -20,4 +20,4 @@ import{L as t,h as e,c as r}from"./router-4dd580c4.js";import"./card-e1020cd0.js
                 }
             }
 
-        `}}customElements.get("simplr-consulting-page")||customElements.define("simplr-consulting-page",s);export default s;
+        `}}customElements.get("simplr-consulting-page")||customElements.define("simplr-consulting-page",r);export default r;

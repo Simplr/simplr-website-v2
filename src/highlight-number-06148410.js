@@ -1,4 +1,4 @@
-import{L as t,h as e,c as r}from"./router-4dd580c4.js";class i extends t{render(){return e`
+import{L as t,h as e,c as r}from"./router-98dcfa0f.js";class i extends t{render(){return e`
             <style>
                 ${this.getStyles()}
             </style>

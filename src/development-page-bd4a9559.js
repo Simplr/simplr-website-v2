@@ -1,4 +1,4 @@
-import{L as e,h as t,c as o,r as s}from"./router-4dd580c4.js";import"./card-e1020cd0.js";import"@simplr-wc/button";class i extends e{static get properties(){return{title:{type:String},imageUrl:{type:String}}}constructor(){super(),this.title="",this.imageUrl=""}firstUpdated(){this.realWidth=this.shadowRoot.querySelector("p").clientWidth,this.style.setProperty("--tech-elem-title-width","0"),this.style.setProperty("--tech-elem-title-hover-width",this.realWidth+"px")}render(){return t`
+import{L as e,h as t,c as o,r as s}from"./router-98dcfa0f.js";import"./button-56559b51.js";class i extends e{static get properties(){return{title:{type:String},imageUrl:{type:String}}}constructor(){super(),this.title="",this.imageUrl=""}firstUpdated(){this.realWidth=this.shadowRoot.querySelector("p").clientWidth,this.style.setProperty("--tech-elem-title-width","0"),this.style.setProperty("--tech-elem-title-hover-width",this.realWidth+"px")}render(){return t`
             <img src="${this.imageUrl}" alt="${this.title}" />
             <p>${this.title}</p>
         `}static get styles(){return o`
@@ -37,7 +37,7 @@ import{L as e,h as t,c as o,r as s}from"./router-4dd580c4.js";import"./card-e102
                 width: 4rem;
                 transition: 200ms ease-in-out;
             }
-        `}}customElements.get("technology-logo")||customElements.define("technology-logo",i);class n extends e{static get properties(){return{}}constructor(){super()}firstUpdated(){this.scrollToBlock()}scrollToBlock(){const e=window.location.hash;if(!e)return;const t=this.shadowRoot.querySelector(e);if(t){console.log("FOO");document.querySelector("simplr-router-container").addEventListener("transitionend",(()=>{console.log("BAR"),t.scrollIntoView({behavior:"smooth"})}))}}render(){return t`
+        `}}customElements.get("technology-logo")||customElements.define("technology-logo",i);class n extends e{static get properties(){return{}}constructor(){super()}firstUpdated(){!function(e){const t=window.location.hash;if(!t)return;const o=e.querySelector(t);if(o){const e=document.querySelector("simplr-router-container[entering-view]");e?e.addEventListener("transitionend",(()=>{o.scrollIntoView({behavior:"smooth"})})):o.scrollIntoView({behavior:"smooth"})}}(this.shadowRoot)}render(){return t`
             <div class="content-pane main-pane">
                 <h2>Development</h2>
                 <p>
