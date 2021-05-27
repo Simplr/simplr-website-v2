@@ -291,6 +291,10 @@ export default class SimplrFrontpage extends LitElement {
                     margin-bottom: 3rem;
                 }
 
+                #consulting-card {
+                    margin-left: 0;
+                }
+
                 .highlight-collection {
                     justify-content: space-between;
                 }

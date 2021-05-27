@@ -1,20 +1,39 @@
 import { LitElement, html, css } from 'lit-element';
-import root from "../utils/rootpath";
+import root from '../utils/rootpath';
 
 export default class TopBar extends LitElement {
+    static get properties() {
+        return {
+            mobileopen: { type: Boolean, reflect: true },
+        };
+    }
+
+    constructor() {
+        super();
+        this.mobileopen = false;
+    }
+
+    toggleMobileMenu() {
+        if (this.mobileopen) {
+            this.mobileopen = false;
+        }
+    }
+
     render() {
         return html`
             <style>
                 ${this.getStyles()}
             </style>
-            <a class="logo-link" href="/">
+            <a @click=${this.toggleMobileMenu} class="logo-link" href="/">
                 <img src="${root()}assets/simplr_horisontal_black.svg" />
             </a>
             <nav class="links">
-                <a href="${root()}development">Development</a>
-                <a href="${root()}consulting">Consulting</a>
-                <a href="${root()}contact">Contact</a>
+                <a @click=${this.toggleMobileMenu} id="mobile-home" href="${root()}">Home</a>
+                <a @click=${this.toggleMobileMenu} href="${root()}development">Development</a>
+                <a @click=${this.toggleMobileMenu} href="${root()}consulting">Consulting</a>
+                <a @click=${this.toggleMobileMenu} href="${root()}contact">Contact</a>
             </nav>
+            <button @click=${() => (this.mobileopen = true)} class="mobile-open">☰</button>
         `;
     }
 
@@ -36,6 +55,14 @@ export default class TopBar extends LitElement {
                 justify-content: space-between;
                 padding: 2rem 20.5% 0;
                 box-sizing: border-box;
+            }
+
+            #mobile-home {
+                display: none;
+            }
+
+            .mobile-open {
+                display: none;
             }
 
             .logo-link {
@@ -67,8 +94,8 @@ export default class TopBar extends LitElement {
                 text-fill-color: transparent;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
-                
-                background-image: linear-gradient(to right, #ff6d00, #ff6d00 50%,  #232320 50%);
+
+                background-image: linear-gradient(to right, #ff6d00, #ff6d00 50%, #232320 50%);
                 background-size: 200% 100%;
                 background-position: 100%;
             }
@@ -77,11 +104,72 @@ export default class TopBar extends LitElement {
                 background-position: 0%;
             }
 
-        @media only screen and (max-width: 720px) {
-            :host {
-                display: none; /* TODO(Matsuuu): Make mobile menu */
+            @media only screen and (max-width: 720px) {
+                .mobile-open {
+                    display: flex;
+                    background: none;
+                    border: none;
+                    font-size: 2rem;
+                    position: fixed;
+                    top: 1rem;
+                    right: 1rem;
+                }
+
+                :host {
+                    background: none;
+                }
+
+                :host([mobileopen]) .mobile-open {
+                    display: none;
+                }
+
+                :host nav,
+                :host a {
+                    display: none;
+                    opacity: 0;
+                }
+
+                :host([mobileopen]) nav,
+                :host([mobileopen]) a {
+                    display: block;
+                    opacity: 1;
+                }
+
+                :host([mobileopen]) {
+                    background: #f0edeb;
+                    padding: 2rem 5%;
+                    flex-direction: column;
+                    height: 100vh;
+                    position: fixed;
+                    opacity: 1;
+                }
+
+                .logo-link {
+                    display: flex;
+                    justify-content: center;
+                    height: unset;
+                }
+
+                .logo-link img {
+                    height: unset;
+                    width: 80%;
+                }
+
+                #mobile-home {
+                    display: flex;
+                }
+
+                nav {
+                    flex-basis: 60%;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+
+                nav * {
+                    margin: 3rem 0;
+                    font-size: 2rem;
+                }
             }
-        }
         `;
     }
 }
