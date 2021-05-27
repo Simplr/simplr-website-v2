@@ -2,6 +2,7 @@ import { LitElement, html, css } from 'lit-element';
 import '@simplr-wc/card';
 import '@simplr-wc/button';
 import './components/technology-logo.js';
+import root from './utils/rootpath.js';
 
 export default class SimplrDevelopmentPage extends LitElement {
     static get properties() {
@@ -12,7 +13,23 @@ export default class SimplrDevelopmentPage extends LitElement {
         super();
     }
 
-    firstUpdated() { }
+    firstUpdated() {
+        this.scrollToBlock();
+    }
+
+    scrollToBlock() {
+        const hash = window.location.hash;
+        if (!hash) return;
+        const elemToFocus = this.shadowRoot.querySelector(hash);
+        if (elemToFocus) {
+            console.log("FOO");
+            const container = document.querySelector("simplr-router-container");
+            container.addEventListener("transitionend", () => {
+                console.log("BAR");
+                elemToFocus.scrollIntoView({ behavior: "smooth" });
+            });
+        }
+    }
 
     render() {
         return html`
@@ -28,21 +45,57 @@ export default class SimplrDevelopmentPage extends LitElement {
                 <h2>Our expertise:</h2>
                 <h3>Languages</h3>
                 <div class="technologies">
-                    <technology-logo imageUrl="/assets/javascript-logo.png" title="Javascript"></technology-logo>
-                    <technology-logo imageUrl="/assets/typescript.png" title="Typescript"></technology-logo>
-                    <technology-logo imageUrl="/assets/c-sharp.png" title="C#"></technology-logo>
-                    <technology-logo imageUrl="/assets/java.png" title="Java"></technology-logo>
-                    <technology-logo imageUrl="/assets/clojure.png" title="Clojure"></technology-logo>
+                    <technology-logo
+                        imageUrl="${root()}assets/javascript-logo.png"
+                        title="Javascript"
+                    ></technology-logo>
+                    <technology-logo imageUrl="${root()}assets/typescript.png" title="Typescript"></technology-logo>
+                    <technology-logo imageUrl="${root()}assets/c-sharp.png" title="C#"></technology-logo>
+                    <technology-logo imageUrl="${root()}assets/java.png" title="Java"></technology-logo>
+                    <technology-logo imageUrl="${root()}assets/clojure.png" title="Clojure"></technology-logo>
                 </div>
                 <h3>Technologies</h3>
                 <div class="technologies">
-                    <technology-logo imageUrl="/assets/aspnet-core.png" title="ASP.NET Core"></technology-logo>
-                    <technology-logo imageUrl="/assets/lit.png" title="Lit"></technology-logo>
-                    <technology-logo imageUrl="/assets/react.svg" title="React"></technology-logo>
-                    <technology-logo imageUrl="/assets/web-components.png" title="Web Components"></technology-logo>
-                    <technology-logo imageUrl="/assets/nodejs.png" title="NodeJS"></technology-logo>
-                    <technology-logo imageUrl="/assets/pwa.png" title="Progressive Web Apps"></technology-logo>
-                    <technology-logo imageUrl="/assets/quarkus.png" title="Quarkus"></technology-logo>
+                    <technology-logo imageUrl="${root()}assets/aspnet-core.png" title="ASP.NET Core"></technology-logo>
+                    <technology-logo imageUrl="${root()}assets/lit.png" title="Lit"></technology-logo>
+                    <technology-logo imageUrl="${root()}assets/react.svg" title="React"></technology-logo>
+                    <technology-logo
+                        imageUrl="${root()}assets/web-components.png"
+                        title="Web Components"
+                    ></technology-logo>
+                    <technology-logo imageUrl="${root()}assets/nodejs.png" title="NodeJS"></technology-logo>
+                    <technology-logo imageUrl="${root()}assets/pwa.png" title="Progressive Web Apps"></technology-logo>
+                    <technology-logo imageUrl="${root()}assets/quarkus.png" title="Quarkus"></technology-logo>
+                </div>
+            </div>
+
+            <div class="content-pane source-pane" id="open">
+                <div class="source-pane-content">
+                    <h2>Open Source</h2>
+                    <p>
+                        At Simplr we value open source culture and endorse our employees to create and contribute to
+                        projects they use and enjoy.
+                    </p>
+                    <p>
+                        Some of the projects developer by the Simplr developers can be found under the
+                        <a target="_blank" href="https://github.com/Simplr">@simplr organization on Github</a>
+                    </p>
+                </div>
+                <div class="source-pane-image">
+                    <img src="${root()}assets/open-source.svg" />
+                </div>
+            </div>
+
+            <div class="content-pane source-pane" id="closed">
+                <div class="source-pane-image">
+                    <img src="${root()}assets/business-deal.svg" />
+                </div>
+                <div class="source-pane-content">
+                    <h2>Closed Source</h2>
+                    <p>
+                        On top of working on open source solutions, we deliver high quality closed source projects to
+                        our customers matching the needs of the company. We write the software, you keep the ownership.
+                    </p>
                 </div>
             </div>
 
@@ -61,11 +114,18 @@ export default class SimplrDevelopmentPage extends LitElement {
                 --content-width: 80%;
             }
 
+            a {
+                color: inherit;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
             .content-pane {
                 display: flex;
                 flex-direction: column;
                 width: var(--content-width);
                 margin-top: 10.5vh;
+                height: 60vh;
                 text-align: center;
                 align-items: center;
                 justify-content: center;
@@ -73,6 +133,24 @@ export default class SimplrDevelopmentPage extends LitElement {
 
             .content-pane p {
                 max-width: 750px;
+            }
+
+            .source-pane {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .source-pane-image {
+                flex-basis: 40%;
+            }
+
+            .source-pane-content {
+                text-align: left;
+                flex-basis: 50%;
+            }
+
+            .source-pane-image img {
+                width: 100%;
             }
 
             .main-pane {

@@ -39,8 +39,12 @@ export default class SimplrFrontpage extends LitElement {
                                 <img src="${root()}assets/search_undraw.svg" />
                             </app-window>
                             <div class="buttons">
-                                <simplr-button elevated primary>Products</simplr-button>
-                                <simplr-button elevated secondary>Open Source</simplr-button>
+                                <a href="${root()}development#closed">
+                                    <simplr-button elevated primary>Products</simplr-button>
+                                </a>
+                                <a href="${root()}development#open">
+                                    <simplr-button elevated secondary>Open Source</simplr-button>
+                                </a>
                             </div>
                         </slot>
                     </simplr-card>
@@ -108,6 +112,10 @@ export default class SimplrFrontpage extends LitElement {
                     transform: translate(0, 100px);
                     opacity: 0;
                 }
+            }
+
+            a {
+                text-decoration: none;
             }
 
             simplr-card {
