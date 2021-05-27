@@ -25,14 +25,25 @@ export default class SimplrDevelopmentPage extends LitElement {
             </div>
 
             <div class="content-pane technologies-pane">
-                <h2>Our technologies:</h2>
+                <h2>Our expertise:</h2>
+                <h3>Languages</h3>
                 <div class="technologies">
-                <technology-logo imageUrl="/assets/javascript-logo.png" title="Javascript"></technology-logo>
-                <technology-logo imageUrl="/assets/lit.png" title="Lit"></technology-logo>
-                <technology-logo imageUrl="/assets/c-sharp.png" title="C#"></technology-logo>
-                <technology-logo imageUrl="/assets/java.png" title="Java"></technology-logo>
-                <technology-logo imageUrl="/assets/web-components.png" title="Web Components"></technology-logo>
-</div>
+                    <technology-logo imageUrl="/assets/javascript-logo.png" title="Javascript"></technology-logo>
+                    <technology-logo imageUrl="/assets/typescript.png" title="Typescript"></technology-logo>
+                    <technology-logo imageUrl="/assets/c-sharp.png" title="C#"></technology-logo>
+                    <technology-logo imageUrl="/assets/java.png" title="Java"></technology-logo>
+                    <technology-logo imageUrl="/assets/clojure.png" title="Clojure"></technology-logo>
+                </div>
+                <h3>Technologies</h3>
+                <div class="technologies">
+                    <technology-logo imageUrl="/assets/aspnet-core.png" title="ASP.NET Core"></technology-logo>
+                    <technology-logo imageUrl="/assets/lit.png" title="Lit"></technology-logo>
+                    <technology-logo imageUrl="/assets/react.svg" title="React"></technology-logo>
+                    <technology-logo imageUrl="/assets/web-components.png" title="Web Components"></technology-logo>
+                    <technology-logo imageUrl="/assets/nodejs.png" title="NodeJS"></technology-logo>
+                    <technology-logo imageUrl="/assets/pwa.png" title="Progressive Web Apps"></technology-logo>
+                    <technology-logo imageUrl="/assets/quarkus.png" title="Quarkus"></technology-logo>
+                </div>
             </div>
 
             <site-footer></site-footer>
@@ -65,18 +76,22 @@ export default class SimplrDevelopmentPage extends LitElement {
             }
 
             .main-pane {
-                margin-top: 20vh;
-                height: 70vh;
+                margin-top: 15vh;
+                height: 72.5vh;
             }
 
             .technologies-pane {
-
             }
 
             .technologies {
                 display: flex;
                 justify-content: flex-start;
                 width: 50%;
+                margin-bottom: 2rem;
+            }
+
+            .technologies-pane h2 {
+                margin-bottom: 4rem;
             }
 
             @keyframes fade-in {

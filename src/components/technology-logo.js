@@ -43,7 +43,7 @@ class TechnologyLogo extends LitElement {
                 padding-left: 1rem;
                 transform: scaleX(0);
                 width: var(--tech-elem-title-width);
-                transition: 200ms ease-in-out;
+                transition: 100ms ease-in-out;
                 transform-origin: left;
                 margin: 0;
                 white-space: pre;
@@ -52,6 +52,7 @@ class TechnologyLogo extends LitElement {
             img:hover ~ p {
                 transform: scaleX(1);
                 width: var(--tech-elem-title-hover-width);
+                transition: 200ms ease-in-out;
             }
 
             img:hover  {
