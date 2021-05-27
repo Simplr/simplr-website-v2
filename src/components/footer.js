@@ -30,7 +30,7 @@ class Footer extends LitElement {
                 min-height: 4rem;
                 color: #232320;
                 justify-content: space-between;
-                padding: 10rem 20%;
+                padding: 20rem 20% 10rem;
                 box-sizing: border-box;
             }
 
