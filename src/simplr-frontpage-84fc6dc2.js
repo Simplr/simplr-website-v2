@@ -1,4 +1,4 @@
-import{L as t,h as e,c as i,r as n,g as r,l as o,t as s}from"./router-fffdc7a6.js";import"./button-c759617a.js";class a extends t{render(){return e`
+import{L as t,h as e,c as i,r as n,g as r,l as o,t as s}from"./router-b42803a7.js";import"./button-8523e676.js";class a extends t{render(){return e`
             <style>
                 ${this.getStyles()}
             </style>
@@ -123,7 +123,7 @@ import{L as t,h as e,c as i,r as n,g as r,l as o,t as s}from"./router-fffdc7a6.j
                     <highlight-number count="2" title="Professional developers"></highlight-number>
                     <highlight-number count="1" title="Vim user"></highlight-number>
                     <highlight-number count="24" title="Cones of Ice Cream in the freezer"></highlight-number>
-                    <highlight-number count="0%" title="Micromanagement"></highlight-number>
+                    <highlight-number count="0%" title="Micro-management"></highlight-number>
                     <highlight-number count="~1200" title="Github Commits in the past year"></highlight-number>
                     <highlight-number count="> 25" title="Published Web Components"></highlight-number>
                     <highlight-number count="> 5" title="Published Javascript libraries"></highlight-number>
@@ -310,5 +310,36 @@ import{L as t,h as e,c as i,r as n,g as r,l as o,t as s}from"./router-fffdc7a6.j
             .highlight-collection * {
                 flex-basis: 30%;
                 margin-bottom: 4rem;
+            }
+
+            @media only screen and (max-width: 720px) {
+                :host {
+                    --content-width: 90%;
+                }
+
+                .hero-content,
+                .intro-content,
+                .contact-content {
+                    margin-top: 10vh;
+                    height: unset;
+                }
+
+                .hero-cards {
+                    margin-top: 10%;
+                    flex-direction: column;
+                }
+
+                #development-card {
+                    padding: 2rem 2rem;
+                    margin-bottom: 3rem;
+                }
+
+                .highlight-collection {
+                    justify-content: space-between;
+                }
+
+                .highlight-collection * {
+                    flex-basis: 45%;
+                }
             }
         `}}customElements.get("simplr-frontpage")||customElements.define("simplr-frontpage",l);export default l;

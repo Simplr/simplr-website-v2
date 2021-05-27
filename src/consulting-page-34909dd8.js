@@ -1,4 +1,4 @@
-import{L as e,h as t,r as n,c as i}from"./router-fffdc7a6.js";import"./button-c759617a.js";import{s as o}from"./scroller-fc63e77b.js";import"./reference-companies-9cec7b52.js";class s extends e{static get properties(){return{}}constructor(){super()}firstUpdated(){o(this.shadowRoot)}render(){return t`
+import{L as e,h as t,r as n,c as i}from"./router-b42803a7.js";import"./button-8523e676.js";import{s as o}from"./scroller-84648350.js";import"./reference-companies-15153cee.js";class s extends e{static get properties(){return{}}constructor(){super()}firstUpdated(){o(this.shadowRoot)}render(){return t`
             <div class="content-pane main-pane">
                 <h2>Consulting</h2>
                 <p>
@@ -24,7 +24,7 @@ import{L as e,h as t,r as n,c as i}from"./router-fffdc7a6.js";import"./button-c7
                 </div>
             </div>
 
-            <div class="content-pane role-pane">
+            <div class="content-pane role-pane" id="satisfaction-guaranteed">
                 <div class="consulting-image">
                     <img src="${n()}assets/satisfaction.svg" />
                 </div>
@@ -99,6 +99,25 @@ import{L as e,h as t,r as n,c as i}from"./router-fffdc7a6.js";import"./button-c7
                 from {
                     transform: translate(0, 100px);
                     opacity: 0;
+                }
+            }
+
+            @media only screen and (max-width: 720px) {
+                :host {
+                    --content-width: 90%;
+                }
+
+                .main-pane {
+                    height: 75vh;
+                }
+
+                .role-pane {
+                    height: unset;
+                    flex-direction: column;
+                }
+
+                #satisfaction-guaranteed {
+                    flex-direction: column-reverse;
                 }
             }
         `}}customElements.get("simplr-consulting-page")||customElements.define("simplr-consulting-page",s);export default s;

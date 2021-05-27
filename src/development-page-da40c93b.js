@@ -1,4 +1,4 @@
-import{L as e,h as o,r as t,c as s}from"./router-fffdc7a6.js";import"./button-c759617a.js";import{s as n}from"./scroller-fc63e77b.js";class i extends e{render(){return o`
+import{L as e,h as o,r as t,c as s}from"./router-b42803a7.js";import"./button-8523e676.js";import{s as n}from"./scroller-84648350.js";class i extends e{render(){return o`
                 <h3>Languages</h3>
                 <div class="technologies">
                     <technology-logo
@@ -24,13 +24,22 @@ import{L as e,h as o,r as t,c as s}from"./router-fffdc7a6.js";import"./button-c7
                     <technology-logo imageUrl="${t()}assets/quarkus.png" title="Quarkus"></technology-logo>
                 </div>
         `}static get styles(){return s`
-
-
             .technologies {
                 display: flex;
-                justify-content: flex-start;
+                justify-content: space-between;
                 width: 50%;
                 margin-bottom: 2rem;
+            }
+
+            @media only screen and (max-width: 720px) {
+                .technologies {
+                    width: 100%;
+                    flex-wrap: wrap;
+                }
+
+                    technology-logo {
+                        margin-bottom: 2rem;
+                    }
             }
     `}}customElements.get("technologies-list")||customElements.define("technologies-list",i);class l extends e{static get properties(){return{}}constructor(){super()}firstUpdated(){n(this.shadowRoot)}render(){return o`
             <div class="content-pane main-pane">
@@ -144,6 +153,24 @@ import{L as e,h as o,r as t,c as s}from"./router-fffdc7a6.js";import"./button-c7
                 from {
                     transform: translate(0, 100px);
                     opacity: 0;
+                }
+            }
+
+            @media only screen and (max-width: 720px) {
+                :host {
+                    --content-width: 90%;
+                }
+                .technologies-pane {
+                    height: unset;
+                }
+
+                .source-pane {
+                    height: unset;
+                    flex-direction: column;
+                }
+
+                #closed {
+                    flex-direction: column-reverse;
                 }
             }
         `}}customElements.get("simplr-development-page")||customElements.define("simplr-development-page",l);export default l;
