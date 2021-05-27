@@ -1,4 +1,4 @@
-import{L as t,h as e,r as n,g as i,l as r,t as o,c as s}from"./router-dc99e7c0.js";import"./button-ad9a9021.js";import"./highlight-number-e08380eb.js";class a extends t{static get properties(){return{}}constructor(){super()}firstUpdated(){}render(){return e`
+import{L as t,h as e,r as n,g as i,l as r,t as o,c as s}from"./router-4dd580c4.js";import"./card-e1020cd0.js";import"@simplr-wc/button";import"./highlight-number-aca89b4f.js";class a extends t{static get properties(){return{}}constructor(){super()}firstUpdated(){}render(){return e`
             ${this.getHeroContent()} ${this.getIntroductionContent()} ${this.getContactContent()}
 
             <site-footer></site-footer>
@@ -13,8 +13,12 @@ import{L as t,h as e,r as n,g as i,l as r,t as o,c as s}from"./router-dc99e7c0.j
                                 <img src="${n()}assets/search_undraw.svg" />
                             </app-window>
                             <div class="buttons">
-                                <simplr-button elevated primary>Products</simplr-button>
-                                <simplr-button elevated secondary>Open Source</simplr-button>
+                                <a href="${n()}development#closed">
+                                    <simplr-button elevated primary>Products</simplr-button>
+                                </a>
+                                <a href="${n()}development#open">
+                                    <simplr-button elevated secondary>Open Source</simplr-button>
+                                </a>
                             </div>
                         </slot>
                     </simplr-card>
@@ -70,6 +74,10 @@ import{L as t,h as e,r as n,g as i,l as r,t as o,c as s}from"./router-dc99e7c0.j
                     transform: translate(0, 100px);
                     opacity: 0;
                 }
+            }
+
+            a {
+                text-decoration: none;
             }
 
             simplr-card {
