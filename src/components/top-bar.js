@@ -22,19 +22,19 @@ export default class TopBar extends LitElement {
         return css`
             :host {
                 position: absolute;
-                top: 2rem;
+                top: 0;
                 left: 0;
                 width: 100%;
-                height: 4rem;
+                height: 6rem;
                 /*box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 1px 0px rgb(0 0 0 / 14%),
                     0px 1px 6px 0px rgb(0 0 0 / 12%);*/
                 display: flex;
                 z-index: 99;
                 overflow: visible;
-                /*background: #fff;*/
+                background: #f0edeb;
                 align-items: center;
                 justify-content: space-between;
-                padding: 0 20.5%;
+                padding: 2rem 20.5% 0;
                 box-sizing: border-box;
             }
 

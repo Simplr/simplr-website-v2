@@ -1,7 +1,7 @@
 import { LitElement, html, css } from 'lit-element';
 import '@simplr-wc/card';
 import '@simplr-wc/button';
-import './components/technology-logo.js';
+import './components/technologies-list.js';
 import root from './utils/rootpath.js';
 import { scrollToBlock } from './utils/scroller.js';
 
@@ -30,30 +30,7 @@ export default class SimplrDevelopmentPage extends LitElement {
 
             <div class="content-pane technologies-pane">
                 <h2>Our expertise:</h2>
-                <h3>Languages</h3>
-                <div class="technologies">
-                    <technology-logo
-                        imageUrl="${root()}assets/javascript-logo.png"
-                        title="Javascript"
-                    ></technology-logo>
-                    <technology-logo imageUrl="${root()}assets/typescript.png" title="Typescript"></technology-logo>
-                    <technology-logo imageUrl="${root()}assets/c-sharp.png" title="C#"></technology-logo>
-                    <technology-logo imageUrl="${root()}assets/java.png" title="Java"></technology-logo>
-                    <technology-logo imageUrl="${root()}assets/clojure.png" title="Clojure"></technology-logo>
-                </div>
-                <h3>Technologies</h3>
-                <div class="technologies">
-                    <technology-logo imageUrl="${root()}assets/aspnet-core.png" title="ASP.NET Core"></technology-logo>
-                    <technology-logo imageUrl="${root()}assets/lit.png" title="Lit"></technology-logo>
-                    <technology-logo imageUrl="${root()}assets/react.svg" title="React"></technology-logo>
-                    <technology-logo
-                        imageUrl="${root()}assets/web-components.png"
-                        title="Web Components"
-                    ></technology-logo>
-                    <technology-logo imageUrl="${root()}assets/nodejs.png" title="NodeJS"></technology-logo>
-                    <technology-logo imageUrl="${root()}assets/pwa.png" title="Progressive Web Apps"></technology-logo>
-                    <technology-logo imageUrl="${root()}assets/quarkus.png" title="Quarkus"></technology-logo>
-                </div>
+                <technologies-list></technologies-list>
             </div>
 
             <div class="content-pane source-pane" id="open">
@@ -101,6 +78,10 @@ export default class SimplrDevelopmentPage extends LitElement {
                 --content-width: 80%;
             }
 
+            .main-pane {
+                animation: fade-in 1000ms;
+            }
+
             a {
                 color: inherit;
                 text-decoration: none;
@@ -143,16 +124,6 @@ export default class SimplrDevelopmentPage extends LitElement {
             .main-pane {
                 margin-top: 15vh;
                 height: 72.5vh;
-            }
-
-            .technologies-pane {
-            }
-
-            .technologies {
-                display: flex;
-                justify-content: flex-start;
-                width: 50%;
-                margin-bottom: 2rem;
             }
 
             .technologies-pane h2 {
