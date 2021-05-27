@@ -1,37 +1,4 @@
-import{L as e,h as t,r as s,c as a}from"./router-16da0b9f.js";import"./button-df474c0a.js";import{s as i}from"./scroller-c4cc4269.js";class n extends e{render(){return t`
-            <simplr-card>
-                <div>
-                    <a target="_blank" href="https://www.fcg.fi/en"><img src="${s()}assets/fcg.svg" /></a>
-                    <a target="_blank" href="https://www.visma.fi/tampuuri/"><img src="${s()}assets/visma-tampuuri.jpg" /></a>
-                    <a target="_blank" href="https://auranmaanhammaslaakarit.fi/"
-                        ><img style="width: 15rem;" src="${s()}assets/alh.png"
-                    /></a>
-                    <a target="_blank" href="http://thinger.fi"><img style="height: 60%;" src="${s()}assets/thinger.png" /></a>
-                </div>
-            </simplr-card>
-        `}static get styles(){return a`
-            :host {
-                width: 80%;
-                display: flex;
-                justify-content: center;
-            }
-
-            simplr-card {
-                max-width: unset;
-                border-radius: 8px;
-            }
-
-            simplr-card div {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            img {
-                width: 10rem;
-                margin: 0 2rem;
-            }
-        `}}customElements.get("reference-companies")||customElements.define("reference-companies",n);class r extends e{static get properties(){return{}}constructor(){super()}firstUpdated(){i(this.shadowRoot)}render(){return t`
+import{L as e,h as t,r as n,c as i}from"./router-fffdc7a6.js";import"./button-c759617a.js";import{s as o}from"./scroller-fc63e77b.js";import"./reference-companies-9cec7b52.js";class s extends e{static get properties(){return{}}constructor(){super()}firstUpdated(){o(this.shadowRoot)}render(){return t`
             <div class="content-pane main-pane">
                 <h2>Consulting</h2>
                 <p>
@@ -53,13 +20,13 @@ import{L as e,h as t,r as s,c as a}from"./router-16da0b9f.js";import"./button-df
                     </p>
                 </div>
                 <div class="consulting-image">
-                    <img src="${s()}assets/project-team.svg" />
+                    <img src="${n()}assets/project-team.svg" />
                 </div>
             </div>
 
             <div class="content-pane role-pane">
                 <div class="consulting-image">
-                    <img src="${s()}assets/satisfaction.svg" />
+                    <img src="${n()}assets/satisfaction.svg" />
                 </div>
                 <div class="consulting-content">
                     <h2>Satisfaction guaranteed</h2>
@@ -73,7 +40,7 @@ import{L as e,h as t,r as s,c as a}from"./router-16da0b9f.js";import"./button-df
             <reference-companies></reference-companies>
 
             <site-footer></site-footer>
-        `}static get styles(){return a`
+        `}static get styles(){return i`
             :host {
                 display: flex;
                 flex-direction: column;
@@ -134,4 +101,4 @@ import{L as e,h as t,r as s,c as a}from"./router-16da0b9f.js";import"./button-df
                     opacity: 0;
                 }
             }
-        `}}customElements.get("simplr-consulting-page")||customElements.define("simplr-consulting-page",r);export default r;
+        `}}customElements.get("simplr-consulting-page")||customElements.define("simplr-consulting-page",s);export default s;

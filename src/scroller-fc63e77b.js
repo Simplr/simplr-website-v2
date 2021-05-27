@@ -1,4 +1,4 @@
-import{L as t,h as e,c as i}from"./router-16da0b9f.js";class r extends t{static get properties(){return{title:{type:String},imageUrl:{type:String}}}constructor(){super(),this.title="",this.imageUrl=""}firstUpdated(){this.realWidth=this.shadowRoot.querySelector("p").clientWidth,this.style.setProperty("--tech-elem-title-width","0"),this.style.setProperty("--tech-elem-title-hover-width",this.realWidth+"px")}render(){return e`
+import{L as t,h as e,c as i}from"./router-fffdc7a6.js";class r extends t{static get properties(){return{title:{type:String},imageUrl:{type:String}}}constructor(){super(),this.title="",this.imageUrl=""}firstUpdated(){this.realWidth=this.shadowRoot.querySelector("p").clientWidth,this.style.setProperty("--tech-elem-title-width","0"),this.style.setProperty("--tech-elem-title-hover-width",this.realWidth+"px")}render(){return e`
             <img src="${this.imageUrl}" alt="${this.title}" />
             <p>${this.title}</p>
         `}static get styles(){return i`

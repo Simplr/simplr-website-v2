@@ -1,4 +1,4 @@
-import{L as e,h as o,r as t,c as s}from"./router-16da0b9f.js";import"./button-df474c0a.js";import{s as n}from"./scroller-c4cc4269.js";class i extends e{render(){return o`
+import{L as e,h as o,r as t,c as s}from"./router-fffdc7a6.js";import"./button-c759617a.js";import{s as n}from"./scroller-fc63e77b.js";class i extends e{render(){return o`
                 <h3>Languages</h3>
                 <div class="technologies">
                     <technology-logo

@@ -1,4 +1,85 @@
-import{L as t,h as e,r as n,g as i,l as r,t as o,c as s}from"./router-16da0b9f.js";import"./button-df474c0a.js";import"./highlight-number-b8087009.js";class a extends t{static get properties(){return{}}constructor(){super()}firstUpdated(){}render(){return e`
+import{L as t,h as e,c as i,r as n,g as r,l as o,t as s}from"./router-fffdc7a6.js";import"./button-c759617a.js";class a extends t{render(){return e`
+            <style>
+                ${this.getStyles()}
+            </style>
+
+            <div class="topbar">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="tab"></div>
+
+            </div>
+            <div class="window">
+                <slot></slot>
+            </div>
+        `}getStyles(){return i`
+            :host {
+                width: 100%;
+                border-radius: 8px;
+                box-shadow: 0px 3px 3px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%),
+                    0px 1px 8px 0px rgb(0 0 0 / 12%);
+                background: lightgrey;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .topbar {
+                width: 100%;
+                height: 2rem;
+                display: flex;
+                align-items: center;
+                margin-left: 0.4rem;
+            }
+
+            .topbar div {
+                width: 0.6rem;
+                height: 0.6rem;
+                border-radius: 50%;
+                background: red;
+                margin-left: 0.25rem; 
+            }
+
+            .topbar div:nth-child(2) {
+                background: orange;
+            }
+            .topbar div:nth-child(3) {
+                background: green;
+            }
+
+            .topbar .tab {
+                background: #FFF;
+                height: 82.5%;
+                width: 5rem;
+                transform: translate(1rem, 17.5%);
+                border-radius: 8px 8px 0 0;
+
+            }
+
+            .window {
+                width: calc(100% - 1rem);
+                background: #fff;
+                margin: 0 0 0.5rem;
+            }
+        `}}customElements.get("app-window")||customElements.define("app-window",a);class c extends t{static get properties(){return{count:{type:String,reflect:!0},title:{type:String,reflect:!0}}}constructor(){super(),this.count="0",this.title=""}render(){return e`
+            <h2>${this.count}</h2>
+            <p>${this.title}</p>
+        `}static get styles(){return i`
+            :host {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            h2 {
+                color: var(--primary-color);
+            }
+
+            h2,
+            p {
+                margin: 0.5rem;
+            }
+        `}}customElements.get("highlight-number")||customElements.define("highlight-number",c);class l extends t{static get properties(){return{}}constructor(){super()}firstUpdated(){}render(){return e`
             ${this.getHeroContent()} ${this.getIntroductionContent()} ${this.getContactContent()}
 
             <site-footer></site-footer>
@@ -27,7 +108,9 @@ import{L as t,h as e,r as n,g as i,l as r,t as o,c as s}from"./router-16da0b9f.j
                             <h2>Consulting</h2>
                             <img src="${n()}assets/consulting_undraw.svg" />
                             <div class="buttons">
-                                <simplr-button outlined primary>Find out more</simplr-button>
+                                <a href="${n()}consulting">
+                                    <simplr-button outlined primary>Find out more</simplr-button>
+                                </a>
                             </div>
                         </slot>
                     </simplr-card>
@@ -53,12 +136,12 @@ import{L as t,h as e,r as n,g as i,l as r,t as o,c as s}from"./router-16da0b9f.j
                 <h2 class="contact-title">Get in contact with us</h2>
 
                 <div class="contacts">
-                    <a href="https://github.com/Simplr">${i}</a>
-                    <a href="https://www.linkedin.com/company/simplrcompany/">${r}</a>
-                    <a href="https://twitter.com/SimplrCompany">${o}</a>
+                    <a href="https://github.com/Simplr">${r}</a>
+                    <a href="https://www.linkedin.com/company/simplrcompany/">${o}</a>
+                    <a href="https://twitter.com/SimplrCompany">${s}</a>
                 </div>
             </div>
-        `}static get styles(){return s`
+        `}static get styles(){return i`
             :host {
                 display: flex;
                 flex-direction: column;
@@ -228,4 +311,4 @@ import{L as t,h as e,r as n,g as i,l as r,t as o,c as s}from"./router-16da0b9f.j
                 flex-basis: 30%;
                 margin-bottom: 4rem;
             }
-        `}}customElements.get("simplr-frontpage")||customElements.define("simplr-frontpage",a);export default a;
+        `}}customElements.get("simplr-frontpage")||customElements.define("simplr-frontpage",l);export default l;
