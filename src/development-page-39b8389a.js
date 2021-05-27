@@ -1,4 +1,4 @@
-import{L as t,h as e,c as o}from"./router-650f1d97.js";import"./button-8211d44e.js";class i extends t{static get properties(){return{title:{type:String},imageUrl:{type:String}}}constructor(){super(),this.title="",this.imageUrl=""}firstUpdated(){this.realWidth=this.shadowRoot.querySelector("p").clientWidth,this.style.setProperty("--tech-elem-title-width","0"),this.style.setProperty("--tech-elem-title-hover-width",this.realWidth+"px")}render(){return e`
+import{L as e,h as t,c as o}from"./router-dc99e7c0.js";import"./button-ad9a9021.js";class s extends e{static get properties(){return{title:{type:String},imageUrl:{type:String}}}constructor(){super(),this.title="",this.imageUrl=""}firstUpdated(){this.realWidth=this.shadowRoot.querySelector("p").clientWidth,this.style.setProperty("--tech-elem-title-width","0"),this.style.setProperty("--tech-elem-title-hover-width",this.realWidth+"px")}render(){return t`
             <img src="${this.imageUrl}" alt="${this.title}" />
             <p>${this.title}</p>
         `}static get styles(){return o`
@@ -16,7 +16,7 @@ import{L as t,h as e,c as o}from"./router-650f1d97.js";import"./button-8211d44e.
                 padding-left: 1rem;
                 transform: scaleX(0);
                 width: var(--tech-elem-title-width);
-                transition: 200ms ease-in-out;
+                transition: 100ms ease-in-out;
                 transform-origin: left;
                 margin: 0;
                 white-space: pre;
@@ -25,6 +25,7 @@ import{L as t,h as e,c as o}from"./router-650f1d97.js";import"./button-8211d44e.
             img:hover ~ p {
                 transform: scaleX(1);
                 width: var(--tech-elem-title-hover-width);
+                transition: 200ms ease-in-out;
             }
 
             img:hover  {
@@ -36,7 +37,7 @@ import{L as t,h as e,c as o}from"./router-650f1d97.js";import"./button-8211d44e.
                 width: 4rem;
                 transition: 200ms ease-in-out;
             }
-        `}}customElements.get("technology-logo")||customElements.define("technology-logo",i);class s extends t{static get properties(){return{}}constructor(){super()}firstUpdated(){}render(){return e`
+        `}}customElements.get("technology-logo")||customElements.define("technology-logo",s);class i extends e{static get properties(){return{}}constructor(){super()}firstUpdated(){}render(){return t`
             <div class="content-pane main-pane">
                 <h2>Development</h2>
                 <p>
@@ -46,14 +47,25 @@ import{L as t,h as e,c as o}from"./router-650f1d97.js";import"./button-8211d44e.
             </div>
 
             <div class="content-pane technologies-pane">
-                <h2>Our technologies:</h2>
+                <h2>Our expertise:</h2>
+                <h3>Languages</h3>
                 <div class="technologies">
-                <technology-logo imageUrl="/assets/javascript-logo.png" title="Javascript"></technology-logo>
-                <technology-logo imageUrl="/assets/lit.png" title="Lit"></technology-logo>
-                <technology-logo imageUrl="/assets/c-sharp.png" title="C#"></technology-logo>
-                <technology-logo imageUrl="/assets/java.png" title="Java"></technology-logo>
-                <technology-logo imageUrl="/assets/web-components.png" title="Web Components"></technology-logo>
-</div>
+                    <technology-logo imageUrl="/assets/javascript-logo.png" title="Javascript"></technology-logo>
+                    <technology-logo imageUrl="/assets/typescript.png" title="Typescript"></technology-logo>
+                    <technology-logo imageUrl="/assets/c-sharp.png" title="C#"></technology-logo>
+                    <technology-logo imageUrl="/assets/java.png" title="Java"></technology-logo>
+                    <technology-logo imageUrl="/assets/clojure.png" title="Clojure"></technology-logo>
+                </div>
+                <h3>Technologies</h3>
+                <div class="technologies">
+                    <technology-logo imageUrl="/assets/aspnet-core.png" title="ASP.NET Core"></technology-logo>
+                    <technology-logo imageUrl="/assets/lit.png" title="Lit"></technology-logo>
+                    <technology-logo imageUrl="/assets/react.svg" title="React"></technology-logo>
+                    <technology-logo imageUrl="/assets/web-components.png" title="Web Components"></technology-logo>
+                    <technology-logo imageUrl="/assets/nodejs.png" title="NodeJS"></technology-logo>
+                    <technology-logo imageUrl="/assets/pwa.png" title="Progressive Web Apps"></technology-logo>
+                    <technology-logo imageUrl="/assets/quarkus.png" title="Quarkus"></technology-logo>
+                </div>
             </div>
 
             <site-footer></site-footer>
@@ -83,18 +95,22 @@ import{L as t,h as e,c as o}from"./router-650f1d97.js";import"./button-8211d44e.
             }
 
             .main-pane {
-                margin-top: 20vh;
-                height: 70vh;
+                margin-top: 15vh;
+                height: 72.5vh;
             }
 
             .technologies-pane {
-
             }
 
             .technologies {
                 display: flex;
                 justify-content: flex-start;
                 width: 50%;
+                margin-bottom: 2rem;
+            }
+
+            .technologies-pane h2 {
+                margin-bottom: 4rem;
             }
 
             @keyframes fade-in {
@@ -103,4 +119,4 @@ import{L as t,h as e,c as o}from"./router-650f1d97.js";import"./button-8211d44e.
                     opacity: 0;
                 }
             }
-        `}}customElements.get("simplr-development-page")||customElements.define("simplr-development-page",s);export default s;
+        `}}customElements.get("simplr-development-page")||customElements.define("simplr-development-page",i);export default i;
