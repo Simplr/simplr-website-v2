@@ -3,6 +3,7 @@ import '@simplr-wc/card';
 import '@simplr-wc/button';
 import './components/technology-logo.js';
 import root from './utils/rootpath.js';
+import { scrollToBlock } from './utils/scroller.js';
 
 export default class SimplrDevelopmentPage extends LitElement {
     static get properties() {
@@ -14,21 +15,7 @@ export default class SimplrDevelopmentPage extends LitElement {
     }
 
     firstUpdated() {
-        this.scrollToBlock();
-    }
-
-    scrollToBlock() {
-        const hash = window.location.hash;
-        if (!hash) return;
-        const elemToFocus = this.shadowRoot.querySelector(hash);
-        if (elemToFocus) {
-            console.log("FOO");
-            const container = document.querySelector("simplr-router-container");
-            container.addEventListener("transitionend", () => {
-                console.log("BAR");
-                elemToFocus.scrollIntoView({ behavior: "smooth" });
-            });
-        }
+        scrollToBlock(this.shadowRoot);
     }
 
     render() {
