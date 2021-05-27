@@ -53,7 +53,9 @@ export default class SimplrFrontpage extends LitElement {
                             <h2>Consulting</h2>
                             <img src="${root()}assets/consulting_undraw.svg" />
                             <div class="buttons">
-                                <simplr-button outlined primary>Find out more</simplr-button>
+                                <a href="${root()}consulting">
+                                    <simplr-button outlined primary>Find out more</simplr-button>
+                                </a>
                             </div>
                         </slot>
                     </simplr-card>
