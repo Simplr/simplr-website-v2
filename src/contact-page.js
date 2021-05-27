@@ -26,17 +26,17 @@ export default class SimplrContactPage extends LitElement {
                 <h2>Contact</h2>
                 <p>Get in contact with us!</p>
                 <div class="contacts">
-                <div class="contact-container">
-                    <p><b>Santeri Wikström, CEO, Software Developer</b></p>
-                    <p>${phone} +358 40 4152119</p>
-                    <p>${email} santeri@simplr.company</p>
+                    <div class="contact-container">
+                        <p><b>Santeri Wikström, CEO, Software Developer</b></p>
+                        <p>${phone} +358 40 4152119</p>
+                        <p>${email} santeri@simplr.company</p>
+                    </div>
+                    <div class="contact-container">
+                        <p><b>Matias Huhta, CTO, Software Engineer</b></p>
+                        <p>${phone} +358 44 2065502</p>
+                        <p>${email} matias@simplr.company</p>
+                    </div>
                 </div>
-                <div class="contact-container">
-                    <p><b>Matias Huhta, CTO, Software Engineer</b></p>
-                    <p>${phone} +358 44 2065502</p>
-                    <p>${email} matias@simplr.company</p>
-                </div>
-</div>
             </div>
 
             <site-footer></site-footer>
@@ -100,6 +100,20 @@ export default class SimplrContactPage extends LitElement {
                 from {
                     transform: translate(0, 100px);
                     opacity: 0;
+                }
+            }
+
+            @media only screen and (max-width: 720px) {
+                :host {
+                    --content-width: 80%;
+                }
+
+                .main-pane {
+                    height: unset;
+                }
+
+                .contact-container {
+                    white-space: unset;
                 }
             }
         `;

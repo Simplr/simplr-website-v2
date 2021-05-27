@@ -35,13 +35,22 @@ class TechnologiesList extends LitElement {
 
     static get styles() {
         return css`
-
-
             .technologies {
                 display: flex;
-                justify-content: flex-start;
+                justify-content: space-between;
                 width: 50%;
                 margin-bottom: 2rem;
+            }
+
+            @media only screen and (max-width: 720px) {
+                .technologies {
+                    width: 100%;
+                    flex-wrap: wrap;
+                }
+
+                    technology-logo {
+                        margin-bottom: 2rem;
+                    }
             }
     `;
     }

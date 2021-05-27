@@ -41,6 +41,21 @@ class ReferenceCompanies extends LitElement {
                 width: 10rem;
                 margin: 0 2rem;
             }
+
+            @media only screen and (max-width: 720px) {
+
+                :host {
+                    margin-top: 20vh;
+                }
+
+                simplr-card div {
+                    flex-direction: column;
+                }
+
+                a {
+                    margin: 2rem 0;
+                }
+            }
         `;
     }
 }

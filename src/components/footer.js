@@ -53,6 +53,12 @@ class Footer extends LitElement {
                 width: 200px;
                 margin-bottom: 2rem;
             }
+
+            @media only screen and (max-width: 720px) {
+                :host {
+                    padding: 20rem 2rem 10rem;
+                }
+            }
         `;
     }
 }

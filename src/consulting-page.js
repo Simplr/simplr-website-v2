@@ -46,7 +46,7 @@ export default class SimplrConsultingPage extends LitElement {
                 </div>
             </div>
 
-            <div class="content-pane role-pane">
+            <div class="content-pane role-pane" id="satisfaction-guaranteed">
                 <div class="consulting-image">
                     <img src="${root()}assets/satisfaction.svg" />
                 </div>
@@ -124,6 +124,25 @@ export default class SimplrConsultingPage extends LitElement {
                 from {
                     transform: translate(0, 100px);
                     opacity: 0;
+                }
+            }
+
+            @media only screen and (max-width: 720px) {
+                :host {
+                    --content-width: 90%;
+                }
+
+                .main-pane {
+                    height: 75vh;
+                }
+
+                .role-pane {
+                    height: unset;
+                    flex-direction: column;
+                }
+
+                #satisfaction-guaranteed {
+                    flex-direction: column-reverse;
                 }
             }
         `;

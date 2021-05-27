@@ -136,6 +136,24 @@ export default class SimplrDevelopmentPage extends LitElement {
                     opacity: 0;
                 }
             }
+
+            @media only screen and (max-width: 720px) {
+                :host {
+                    --content-width: 90%;
+                }
+                .technologies-pane {
+                    height: unset;
+                }
+
+                .source-pane {
+                    height: unset;
+                    flex-direction: column;
+                }
+
+                #closed {
+                    flex-direction: column-reverse;
+                }
+            }
         `;
     }
 }

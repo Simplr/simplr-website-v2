@@ -76,6 +76,12 @@ export default class TopBar extends LitElement {
             a:hover {
                 background-position: 0%;
             }
+
+        @media only screen and (max-width: 720px) {
+            :host {
+                display: none; /* TODO(Matsuuu): Make mobile menu */
+            }
+        }
         `;
     }
 }
