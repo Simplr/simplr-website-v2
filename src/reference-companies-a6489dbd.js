@@ -1,4 +1,4 @@
-import{L as e,h as t,r as a,c as r}from"./router-b42803a7.js";import"./button-8523e676.js";class s extends e{render(){return t`
+import{L as e,h as t,r as a,c as r}from"./router-f11d74d6.js";import"./button-72a2142a.js";class s extends e{render(){return t`
             <simplr-card>
                 <div>
                     <a target="_blank" href="https://www.fcg.fi/en"><img src="${a()}assets/fcg.svg" /></a>

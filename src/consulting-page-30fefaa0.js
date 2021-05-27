@@ -1,4 +1,4 @@
-import{L as e,h as t,r as n,c as i}from"./router-b42803a7.js";import"./button-8523e676.js";import{s as o}from"./scroller-84648350.js";import"./reference-companies-15153cee.js";class s extends e{static get properties(){return{}}constructor(){super()}firstUpdated(){o(this.shadowRoot)}render(){return t`
+import{L as e,h as t,r as n,c as i}from"./router-f11d74d6.js";import"./button-72a2142a.js";import{s as o}from"./scroller-1a09bcf7.js";import"./reference-companies-a6489dbd.js";class a extends e{static get properties(){return{}}constructor(){super()}firstUpdated(){o(this.shadowRoot)}render(){return t`
             <div class="content-pane main-pane">
                 <h2>Consulting</h2>
                 <p>
@@ -120,4 +120,4 @@ import{L as e,h as t,r as n,c as i}from"./router-b42803a7.js";import"./button-85
                     flex-direction: column-reverse;
                 }
             }
-        `}}customElements.get("simplr-consulting-page")||customElements.define("simplr-consulting-page",s);export default s;
+        `}}customElements.get("simplr-consulting-page")||customElements.define("simplr-consulting-page",a);export default a;

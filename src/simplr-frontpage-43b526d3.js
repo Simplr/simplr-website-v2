@@ -1,4 +1,4 @@
-import{L as t,h as e,c as i,r as n,g as r,l as o,t as s}from"./router-b42803a7.js";import"./button-8523e676.js";class a extends t{render(){return e`
+import{L as t,h as e,c as n,r as i,g as r,l as o,t as s}from"./router-f11d74d6.js";import"./button-72a2142a.js";class a extends t{render(){return e`
             <style>
                 ${this.getStyles()}
             </style>
@@ -13,7 +13,7 @@ import{L as t,h as e,c as i,r as n,g as r,l as o,t as s}from"./router-b42803a7.j
             <div class="window">
                 <slot></slot>
             </div>
-        `}getStyles(){return i`
+        `}getStyles(){return n`
             :host {
                 width: 100%;
                 border-radius: 8px;
@@ -65,7 +65,7 @@ import{L as t,h as e,c as i,r as n,g as r,l as o,t as s}from"./router-b42803a7.j
         `}}customElements.get("app-window")||customElements.define("app-window",a);class c extends t{static get properties(){return{count:{type:String,reflect:!0},title:{type:String,reflect:!0}}}constructor(){super(),this.count="0",this.title=""}render(){return e`
             <h2>${this.count}</h2>
             <p>${this.title}</p>
-        `}static get styles(){return i`
+        `}static get styles(){return n`
             :host {
                 display: flex;
                 flex-direction: column;
@@ -91,13 +91,13 @@ import{L as t,h as e,c as i,r as n,g as r,l as o,t as s}from"./router-b42803a7.j
                         <slot name="content">
                             <h2>Full-Stack Development</h2>
                             <app-window>
-                                <img src="${n()}assets/search_undraw.svg" />
+                                <img src="${i()}assets/search_undraw.svg" />
                             </app-window>
                             <div class="buttons">
-                                <a href="${n()}development#closed">
+                                <a href="${i()}development#closed">
                                     <simplr-button elevated primary>Products</simplr-button>
                                 </a>
-                                <a href="${n()}development#open">
+                                <a href="${i()}development#open">
                                     <simplr-button elevated secondary>Open Source</simplr-button>
                                 </a>
                             </div>
@@ -106,9 +106,9 @@ import{L as t,h as e,c as i,r as n,g as r,l as o,t as s}from"./router-b42803a7.j
                     <simplr-card id="consulting-card">
                         <slot name="content">
                             <h2>Consulting</h2>
-                            <img src="${n()}assets/consulting_undraw.svg" />
+                            <img src="${i()}assets/consulting_undraw.svg" />
                             <div class="buttons">
-                                <a href="${n()}consulting">
+                                <a href="${i()}consulting">
                                     <simplr-button outlined primary>Find out more</simplr-button>
                                 </a>
                             </div>
@@ -141,7 +141,7 @@ import{L as t,h as e,c as i,r as n,g as r,l as o,t as s}from"./router-b42803a7.j
                     <a href="https://twitter.com/SimplrCompany">${s}</a>
                 </div>
             </div>
-        `}static get styles(){return i`
+        `}static get styles(){return n`
             :host {
                 display: flex;
                 flex-direction: column;
@@ -332,6 +332,10 @@ import{L as t,h as e,c as i,r as n,g as r,l as o,t as s}from"./router-b42803a7.j
                 #development-card {
                     padding: 2rem 2rem;
                     margin-bottom: 3rem;
+                }
+
+                #consulting-card {
+                    margin-left: 0;
                 }
 
                 .highlight-collection {
