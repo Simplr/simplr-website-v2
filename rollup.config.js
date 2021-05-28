@@ -17,7 +17,8 @@ export default {
         copy({
             targets: [
                 { src: "index.html", dest: "dist" },
-                { src: "assets", dest: "dist" }
+                { src: "assets", dest: "dist" },
+                { src: "seo", dest: "dist" }
             ]
         }),
         filesize(),

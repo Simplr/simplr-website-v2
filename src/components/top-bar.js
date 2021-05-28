@@ -25,7 +25,7 @@ export default class TopBar extends LitElement {
                 ${this.getStyles()}
             </style>
             <a @click=${this.toggleMobileMenu} class="logo-link" href="${root()}">
-                <img src="${root()}assets/simplr_horisontal_black.svg" />
+                <img src="${root()}assets/simplr_horisontal_black.svg" alt="Simplr Logo" />
             </a>
             <nav class="links">
                 <a @click=${this.toggleMobileMenu} id="mobile-home" href="${root()}">Home</a>

@@ -29,7 +29,7 @@ export default class SimplrFrontpage extends LitElement {
                         <slot name="content">
                             <h2>Full-Stack Development</h2>
                             <app-window>
-                                <img src="${root()}assets/search_undraw.svg" />
+                                <img src="${root()}assets/search_undraw.svg" alt="Search view mockup drawing" />
                             </app-window>
                             <div class="buttons">
                                 <a href="${root()}development#closed">
@@ -44,7 +44,7 @@ export default class SimplrFrontpage extends LitElement {
                     <simplr-card id="consulting-card">
                         <slot name="content">
                             <h2>Consulting</h2>
-                            <img src="${root()}assets/consulting_undraw.svg" />
+                            <img src="${root()}assets/consulting_undraw.svg" alt="Consulting mockup image" />
                             <div class="buttons">
                                 <a href="${root()}consulting">
                                     <simplr-button outlined primary>Find out more</simplr-button>
@@ -82,9 +82,9 @@ export default class SimplrFrontpage extends LitElement {
                 <h2 class="contact-title">Get in contact with us</h2>
 
                 <div class="contacts">
-                    <a href="https://github.com/Simplr">${github}</a>
-                    <a href="https://www.linkedin.com/company/simplrcompany/">${linkedin}</a>
-                    <a href="https://twitter.com/SimplrCompany">${twitter}</a>
+                    <a href="https://github.com/Simplr" aria-label="Github">${github}</a>
+                    <a href="https://www.linkedin.com/company/simplrcompany/" aria-label="LinkedIN">${linkedin}</a>
+                    <a href="https://twitter.com/SimplrCompany" aria-label="Twitter">${twitter}</a>
                 </div>
             </div>
         `;
@@ -104,6 +104,11 @@ export default class SimplrFrontpage extends LitElement {
 
             app-window {
                 margin: 2rem 0;
+            }
+
+            simplr-button {
+                --primary-color: #0077be;
+                --secondary-color: #d62f05;
             }
 
             .contact-title {
@@ -209,7 +214,7 @@ export default class SimplrFrontpage extends LitElement {
 
             #consulting-card {
                 padding: 4rem 3rem;
-                background: lightsalmon;
+                background: #ff6a2f;
                 max-width: 550px;
                 margin-left: 1rem;
             }
@@ -226,7 +231,7 @@ export default class SimplrFrontpage extends LitElement {
 
             #consulting-card simplr-button {
                 --size: 22px;
-                --primary-color: #fff;
+                --primary-color: #050505;
                 font-weight: 700;
             }
 

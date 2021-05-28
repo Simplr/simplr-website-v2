@@ -15,9 +15,9 @@ class Footer extends LitElement {
                 <p>+358 40 4152119</p>
             </div>
             <div class="footer-socials">
-                <a href="https://github.com/Simplr">${github}</a>
-                <a href="https://www.linkedin.com/company/simplrcompany/">${linkedin}</a>
-                <a href="https://twitter.com/SimplrCompany">${twitter}</a>
+                <a href="https://github.com/Simplr" aria-label="Github">${github}</a>
+                <a href="https://www.linkedin.com/company/simplrcompany/" aria-label="LinkedIN">${linkedin}</a>
+                <a href="https://twitter.com/SimplrCompany" aria-label="Twitter">${twitter}</a>
             </div>
         `;
     }
