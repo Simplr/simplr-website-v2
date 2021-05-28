@@ -269,6 +269,7 @@ export default class SimplrFrontpage extends LitElement {
             @media only screen and (max-width: 720px) {
                 :host {
                     --content-width: 90%;
+                    overflow-x: hidden;
                 }
 
                 .hero-content,
