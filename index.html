@@ -74,14 +74,6 @@
     <body>
         <top-bar></top-bar>
 
-        <script type="module">
-            window.requestAnimationFrame(() => {
-                if (window.location.href.includes('github.io')) {
-                    import('/simplr-website-v2/src/router.js');
-                } else {
-                    import('/src/router.js');
-                }
-            });
-        </script>
+        <script type="module" src="/src/router.js"></script>
     </body>
 </html>

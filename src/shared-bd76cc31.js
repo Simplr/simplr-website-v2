@@ -1,4 +1,4 @@
-import{a as t,h as e,c as o}from"./router-e37de3d9.js";
+import{a as t,h as e,c as o}from"./router.js";
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
 
