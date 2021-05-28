@@ -104,6 +104,12 @@ export default class TopBar extends LitElement {
                 background-position: 0%;
             }
 
+            @media only screen and (max-width: 980px) {
+                :host {
+                    padding: 2rem 10.5% 0;
+                }
+            }
+
             @media only screen and (max-width: 720px) {
                 .mobile-open {
                     display: flex;

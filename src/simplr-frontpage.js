@@ -11,15 +11,6 @@ import { viewCSS } from './style/shared';
 
 // This file is quite messy but really don't see a proper reason to separata parts of it 
 export default class SimplrFrontpage extends LitElement {
-    static get properties() {
-        return {};
-    }
-
-    constructor() {
-        super();
-    }
-
-    firstUpdated() { }
 
     render() {
         return html`
@@ -251,15 +242,11 @@ export default class SimplrFrontpage extends LitElement {
                 margin-bottom: 4rem;
             }
 
-            @media only screen and (max-width: 720px) {
-                :host {
-                    --content-width: 90%;
-                }
-
+            @media only screen and (max-width: 980px) {
                 .hero-content,
                 .intro-content,
                 .contact-content {
-                    margin-top: 10vh;
+                    margin-top: 20vh;
                     height: unset;
                 }
 
@@ -275,6 +262,19 @@ export default class SimplrFrontpage extends LitElement {
 
                 #consulting-card {
                     margin-left: 0;
+                }
+
+            }
+
+            @media only screen and (max-width: 720px) {
+                :host {
+                    --content-width: 90%;
+                }
+
+                .hero-content,
+                .intro-content,
+                .contact-content {
+                    margin-top: 10vh;
                 }
 
                 .highlight-collection {
