@@ -8,11 +8,15 @@ class ReferenceCompanies extends LitElement {
             <simplr-card>
                 <div>
                     <a target="_blank" href="https://www.fcg.fi/en"><img src="${root()}assets/fcg.svg" /></a>
-                    <a target="_blank" href="https://www.visma.fi/tampuuri/"><img src="${root()}assets/visma-tampuuri.jpg" /></a>
+                    <a target="_blank" href="https://www.visma.fi/tampuuri/"
+                        ><img src="${root()}assets/visma-tampuuri.jpg"
+                    /></a>
                     <a target="_blank" href="https://auranmaanhammaslaakarit.fi/"
                         ><img style="width: 15rem;" src="${root()}assets/alh.png"
                     /></a>
-                    <a target="_blank" href="http://thinger.fi"><img style="height: 60%;" src="${root()}assets/thinger.png" /></a>
+                    <a target="_blank" href="http://thinger.fi"
+                        ><img style="height: 60%;" src="${root()}assets/thinger.png"
+                    /></a>
                 </div>
             </simplr-card>
         `;
@@ -44,7 +48,6 @@ class ReferenceCompanies extends LitElement {
             }
 
             @media only screen and (max-width: 720px) {
-
                 :host {
                     margin-top: 20vh;
                 }
@@ -55,6 +58,10 @@ class ReferenceCompanies extends LitElement {
 
                 a {
                     margin: 2rem 0;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
             }
         `;
