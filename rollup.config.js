@@ -11,6 +11,7 @@ export default {
         dir: 'dist/src',
         format: 'es',
     },
+    preserveEntrySignatures: false,
     plugins: [
         resolve(),
         minifyHTML(),
@@ -18,7 +19,7 @@ export default {
             targets: [
                 { src: "index.html", dest: "dist" },
                 { src: "assets", dest: "dist" },
-                { src: "seo", dest: "dist" }
+                { src: "seo/*", dest: "dist" }
             ]
         }),
         filesize(),

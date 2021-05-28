@@ -9,9 +9,8 @@ import { linkedin } from './icons/linkedin';
 import { twitter } from './icons/twitter';
 import { viewCSS } from './style/shared';
 
-// This file is quite messy but really don't see a proper reason to separata parts of it 
+// This file is quite messy but really don't see a proper reason to separata parts of it
 export default class SimplrFrontpage extends LitElement {
-
     render() {
         return html`
             ${this.getHeroContent()} ${this.getIntroductionContent()} ${this.getContactContent()}
@@ -91,207 +90,227 @@ export default class SimplrFrontpage extends LitElement {
     }
 
     static get styles() {
-        return [viewCSS, css`
-
-            simplr-card {
-                border-radius: 16px;
-                max-width: unset;
-            }
-
-            simplr-button {
-                white-space: nowrap;
-            }
-
-            app-window {
-                margin: 2rem 0;
-            }
-
-            simplr-button {
-                --primary-color: #0077be;
-                --secondary-color: #d62f05;
-            }
-
-            .contact-title {
-                margin-bottom: 4rem;
-            }
-
-            .contacts {
-                display: flex;
-                justify-content: space-between;
-            }
-
-            .contacts * {
-                margin: 0 1rem;
-            }
-
-            .contact-content svg {
-                width: 5rem;
-                height: 5rem;
-            }
-
-            .contact-content a {
-                transition: 200ms ease-in-out;
-            }
-
-            .contact-content a:hover {
-                fill: var(--primary-color);
-            }
-
-            .hero-content,
-            .intro-content,
-            .contact-content {
-                display: flex;
-                flex-direction: column;
-                width: var(--content-width);
-                margin-top: 10.5vh;
-                height: calc(100vh - 12.5vh);
-                text-align: center;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .intro-content,
-            .contact-content {
-                justify-content: flex-start;
-            }
-
-            .contact-content {
-                height: calc(100vh - 45vh);
-            }
-
-            .hero-content slot[name='content'] {
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: space-between;
-            }
-
-            .hero-content h2 {
-                font-weight: 900;
-                margin: 0;
-            }
-
-            .hero-title {
-                animation: fade-in 1000ms;
-            }
-
-            .hero-content simplr-card {
-                box-sizing: border-box;
-            }
-
-            .hero-cards {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-top: 2%;
-                width: 100%;
-                flex-basis: 75%;
-                animation: fade-in 1500ms;
-            }
-
-            #development-card img {
-                margin: 3rem 0 2rem;
-                width: 50%;
-                height: auto;
-                fill: #ff6d00;
-            }
-
-            #development-card .buttons {
-                display: flex;
-                justify-content: space-between;
-                width: 100%;
-            }
-
-            #development-card simplr-button {
-                --size: 18px;
-            }
-
-            #development-card {
-                padding: 2rem 3rem;
-                max-width: 450px;
-            }
-
-            #consulting-card {
-                padding: 4rem 3rem;
-                background: #ff6a2f;
-                max-width: 550px;
-                margin-left: 1rem;
-            }
-
-            #consulting-card img {
-                width: 80%;
-                margin: 2rem 0;
-                filter: drop-shadow(6px 12px 6px rgba(0, 0, 0, 0.12));
-            }
-
-            #consulting-card .buttons {
-                justify-content: center;
-            }
-
-            #consulting-card simplr-button {
-                --size: 22px;
-                --primary-color: #050505;
-                font-weight: 700;
-            }
-
-            .highlight-collection {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                margin-top: 3rem;
-            }
-
-            .highlight-collection * {
-                flex-basis: 30%;
-                margin-bottom: 4rem;
-            }
-
-            @media only screen and (max-width: 980px) {
-                .hero-content,
-                .intro-content,
-                .contact-content {
-                    margin-top: 20vh;
-                    height: unset;
+        return [
+            viewCSS,
+            css`
+                simplr-card {
+                    border-radius: 16px;
+                    max-width: unset;
                 }
 
-                .hero-cards {
-                    margin-top: 10%;
-                    flex-direction: column;
+                simplr-button {
+                    white-space: nowrap;
                 }
 
-                #development-card {
-                    padding: 2rem 2rem;
-                    margin-bottom: 3rem;
+                app-window {
+                    margin: 2rem 0;
                 }
 
-                #consulting-card {
-                    margin-left: 0;
+                simplr-button {
+                    --primary-color: #0077be;
+                    --secondary-color: #d62f05;
                 }
 
-            }
-
-            @media only screen and (max-width: 720px) {
-                :host {
-                    --content-width: 90%;
-                    overflow-x: hidden;
+                .contact-title {
+                    margin-bottom: 4rem;
                 }
 
-                .hero-content,
-                .intro-content,
-                .contact-content {
-                    margin-top: 10vh;
-                }
-
-                .highlight-collection {
+                .contacts {
+                    display: flex;
                     justify-content: space-between;
                 }
 
-                .highlight-collection * {
-                    flex-basis: 45%;
+                .contacts * {
+                    margin: 0 1rem;
                 }
-            }
-        `];
+
+                .contact-content svg {
+                    width: 5rem;
+                    height: 5rem;
+                }
+
+                .contact-content a {
+                    transition: 200ms ease-in-out;
+                }
+
+                .contact-content a:hover {
+                    fill: var(--primary-color);
+                }
+
+                .hero-content,
+                .intro-content,
+                .contact-content {
+                    display: flex;
+                    flex-direction: column;
+                    width: var(--content-width);
+                    margin-top: 10.5vh;
+                    height: calc(100vh - 12.5vh);
+                    text-align: center;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .intro-content,
+                .contact-content {
+                    justify-content: flex-start;
+                }
+
+                .contact-content {
+                    height: calc(100vh - 45vh);
+                }
+
+                .hero-content slot[name='content'] {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+
+                .hero-content h2 {
+                    font-weight: 900;
+                    margin: 0;
+                }
+
+                .hero-title {
+                    animation: fade-in 1000ms;
+                }
+
+                .hero-content simplr-card {
+                    box-sizing: border-box;
+                }
+
+                .hero-cards {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 2%;
+                    width: 100%;
+                    flex-basis: 75%;
+                    animation: fade-in 1500ms;
+                }
+
+                #development-card img {
+                    margin: 3rem 0 2rem;
+                    width: 50%;
+                    height: auto;
+                    fill: #ff6d00;
+                }
+
+                #development-card .buttons {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                }
+
+                #development-card simplr-button {
+                    --size: 18px;
+                }
+
+                #development-card {
+                    padding: 2rem 3rem;
+                    max-width: 450px;
+                }
+
+                #consulting-card {
+                    padding: 4rem 3rem;
+                    background: #ff6a2f;
+                    max-width: 550px;
+                    margin-left: 1rem;
+                }
+
+                #consulting-card img {
+                    width: 80%;
+                    margin: 2rem 0;
+                    filter: drop-shadow(6px 12px 6px rgba(0, 0, 0, 0.12));
+                }
+
+                #consulting-card .buttons {
+                    justify-content: center;
+                }
+
+                #consulting-card simplr-button {
+                    --size: 22px;
+                    --primary-color: #050505;
+                    font-weight: 700;
+                }
+
+                .highlight-collection {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    margin-top: 3rem;
+                }
+
+                .highlight-collection * {
+                    flex-basis: 30%;
+                    margin-bottom: 4rem;
+                }
+
+                @media only screen and (max-width: 980px) {
+                    .hero-content,
+                    .intro-content,
+                    .contact-content {
+                        margin-top: 20vh;
+                        height: unset;
+                    }
+
+                    .hero-cards {
+                        margin-top: 10%;
+                        flex-direction: column;
+                    }
+
+                    #development-card {
+                        padding: 2rem 2rem;
+                        margin-bottom: 3rem;
+                    }
+
+                    #consulting-card {
+                        margin-left: 0;
+                    }
+                }
+
+                @media only screen and (max-width: 720px) {
+                    :host {
+                        --content-width: 90%;
+                        overflow-x: hidden;
+                    }
+
+                    .hero-content,
+                    .intro-content,
+                    .contact-content {
+                        margin-top: 10vh;
+                    }
+
+                    .highlight-collection {
+                        justify-content: space-between;
+                    }
+
+                    .highlight-collection * {
+                        flex-basis: 45%;
+                    }
+                }
+
+                @media only screen and (max-width: 350px) {
+                    .highlight-collection * {
+                        max-width: 50%;
+                    }
+
+                    #development-card {
+                        padding: 2rem 0;
+                    }
+
+                    #consulting-card {
+                        padding: 4rem 2rem;
+                    }
+
+                    .contact-content svg {
+                        width: 3rem;
+                        height: 3rem;
+                    }
+                }
+            `,
+        ];
     }
 }
 
